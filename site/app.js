@@ -37,6 +37,9 @@ const store = {
   },
 };
 
+// Drawn fleuron used under titles (colored by CSS currentColor)
+const ORNAMENT = '<svg class="ornament" viewBox="0 0 200 20" aria-hidden="true"><path d="M10 10H78M122 10H190" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="6" cy="10" r="1.6" fill="currentColor"/><circle cx="194" cy="10" r="1.6" fill="currentColor"/><path d="M87 6.5 90.5 10 87 13.5 83.5 10ZM113 6.5 116.5 10 113 13.5 109.5 10Z" fill="currentColor"/><g fill="currentColor"><ellipse cx="100" cy="4.6" rx="2.3" ry="4"/><ellipse cx="100" cy="15.4" rx="2.3" ry="4"/><ellipse cx="94.6" cy="10" rx="4" ry="2.3"/><ellipse cx="105.4" cy="10" rx="4" ry="2.3"/></g><circle cx="100" cy="10" r="1.5" fill="var(--bg)"/></svg>';
+
 const ICON = {
   star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg>',
   back: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
@@ -124,6 +127,8 @@ async function init() {
   if (!['all', 'favorites', ...state.categories].includes(state.filter)) state.filter = 'all';
 
   $('#book-title').textContent = state.book.title || 'Family Cookbook';
+  $('#book-kicker').textContent = state.book.kicker || '';
+  $('#book-kicker').hidden = !state.book.kicker;
   $('#book-subtitle').textContent = state.book.subtitle || '';
   $('#book-subtitle').hidden = !state.book.subtitle;
   $('#extras').innerHTML = state.pages
@@ -345,6 +350,7 @@ function recipeHTML(r) {
       <header class="recipe-head">
         <p class="eyebrow">${esc(r.category)}</p>
         <h1>${esc(r.title)}</h1>
+        ${ORNAMENT}
         ${r.description ? `<p class="lede">${rich(r.description)}</p>` : ''}
         ${
           facts.length
@@ -524,6 +530,7 @@ function pageHTML(pg) {
       <header class="page-head">
         <p class="eyebrow">From the binder</p>
         <h1>${esc(pg.title)}</h1>
+        ${ORNAMENT}
         ${pg.intro ? `<p class="lede">${rich(pg.intro)}</p>` : ''}
       </header>
       ${pg.body ? `<div class="prose">${notesHTML(pg.body)}</div>` : ''}

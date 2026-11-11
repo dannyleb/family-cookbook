@@ -1,4 +1,5 @@
 # Site-wide settings.
+kicker: Recettes de famille   # small script line above the title (optional)
 title: Family Cookbook
 subtitle: Our recipes, off the index cards and onto every phone.
 
