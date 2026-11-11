@@ -62,8 +62,9 @@ build (validation + table layout).
   table toggle, wake lock.
 - Test UI changes in Playwright at phone width (iPhone SE/13) and desktop, light and dark.
 - Look: French country, fancy but welcoming. Color tokens at the top of `site/styles.css`
-  (bleu, linen, rouge, brass; dark mode is "nuit" navy). Fonts: Cormorant Garamond (titles),
-  Lora (text), Pinyon Script only for the kicker, the footer and letter sign-offs. Embellishments
+  (bleu, linen, rouge, brass; dark mode is "nuit" navy). Fonts: Gilda Display (titles; one
+  weight, no italic, so keep display text at weight 400 and upright), Spectral (text, step
+  numbers), Pinyon Script only for the kicker, the footer and letter sign-offs. Embellishments
   (tricolore ribbon, gingham hero, fleuron `ORNAMENT`, menu-card frames) stay subtle; don't add
   more decoration to recipe content, which needs to stay easy to read while cooking.
 
