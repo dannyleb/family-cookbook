@@ -67,3 +67,6 @@ build (validation + table layout).
 - The letter and essay are published with names, the email address and other personal details
   removed (user's request). Keep it that way when editing them, and crop names/addresses off
   photos before committing.
+- Family first names and nicknames in recipes are fine to keep (user confirmed): Nikki's notes,
+  "Grammi Jan", "Billy's", "Gramma Florence". The rule above is about full names, emails,
+  addresses and similar.
