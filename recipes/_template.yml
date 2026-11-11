@@ -1,0 +1,50 @@
+# Copy this file to recipes/<recipe-name>.yml (lowercase, dashes, no spaces).
+# Files starting with "_" are ignored by the site.
+
+title: Grandma's Meatballs          # required
+category: Mains                     # one category; see cookbook.yml for the usual list
+from: Grandma Rose                  # who the recipe comes from (optional)
+serves: 6                           # optional
+time: 1 hr 15 min                   # optional
+tags: [italian, sunday dinner]      # optional, helps search
+description: One line about the dish.   # optional
+
+image: grandmas-meatballs.jpg       # optional photo of the food, in images/
+scan: grandmas-meatballs-card.jpg   # optional photo of the original card, in images/
+                                    # (several pages: scan: [a.jpg, b.jpg])
+
+# Prep that happens before anything else. Full-width rows at the top of the table.
+before:
+  - Preheat oven to 400°F (200°C)
+
+# Each ingredient gets a short id (left of the colon) that steps refer to.
+# "heading" adds a sub-heading in the list, e.g. "For the sauce".
+ingredients:
+  - heading: Meatballs
+  - beef: 1 lb ground beef
+  - crumbs: 1/2 cup breadcrumbs
+  - egg: 1 egg
+  - heading: Sauce
+  - tomatoes: 1 can (28 oz) crushed tomatoes
+
+# action: short label for the table view ("mix", "simmer 20 min")
+# uses:   ingredient ids and/or earlier step results. "previous" = the step before.
+#         Leaving "uses" out means [previous].
+# text:   the full instruction for the normal view.
+# id:     optional name so a later (non-adjacent) step can use this step's result.
+steps:
+  - id: meatballs
+    action: mix, roll into 2-in balls
+    uses: [beef, crumbs, egg]
+    text: Mix the beef, breadcrumbs and egg. Roll into 2-inch balls.
+  - id: sauce
+    action: simmer 10 min
+    uses: [tomatoes]
+    text: Simmer the tomatoes for 10 minutes.
+  - action: bake 25 min
+    uses: [meatballs, sauce]
+    text: Put the meatballs in a baking dish, pour the sauce over, and bake 25 minutes.
+
+notes: |
+  Anything worth remembering. Blank lines start a new paragraph.
+  Link another recipe like this: serve with [[herbed-rice]].

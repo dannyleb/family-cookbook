@@ -1,0 +1,20 @@
+title: Cheesy Potatoes
+category: Sides
+serves: 6–8 people
+tags: [potatoes, hash browns, casserole, cheddar, sour cream]
+scan: cheesy-potatoes-card.jpg
+
+ingredients:
+  - hashbrowns: 2 lb. frozen hash browns, slightly thawed
+  - marg: ½ cup melted margarine
+  - soup: 1 can cream [of] chicken soup
+  - onions: ½ cup chopped onions
+  - sourcream: 1 pt. sour cream
+  - cheese: 8 oz. cheddar cheese
+
+steps:
+  - action: mix all together
+    uses: [hashbrowns, marg, soup, onions, sourcream, cheese]
+    text: Mix all together.
+  - action: greased dish; bake 350° uncovered 1½ hr
+    text: Put in a greased baking dish. Bake at 350°, uncovered, 1½ hours.

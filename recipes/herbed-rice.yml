@@ -1,0 +1,23 @@
+title: Herbed Rice
+category: Sides
+tags: [rice, mushrooms, beef broth, side]
+description: Goes with [[chicken-breasts-for-4]].
+scan: chicken-breasts-for-4-card.jpg
+
+ingredients:
+  - rice: 1½ cups rice
+  - liquid: 3 cups “W” (water, presumably)
+  - broth: Beef broth
+  - basil: ½ tsp. basil
+  - mushrooms: Mushrooms
+  - butter: ½ stick butter
+  - pepper: Pepper
+  - onion: Green onion
+
+steps:
+  - action: cook together
+    uses: [rice, liquid, broth, basil, mushrooms, butter, pepper, onion]
+    text: Cook the rice in the liquid with the beef broth, basil, mushrooms, butter, pepper and green onion.
+
+notes: |
+  The card is a one-line list: “beef broth – basil (½ tea) – mush. – butter (½ st.) – pepper, gr. onion, 3 cup W, 1½ cup rice”. No amounts for the broth, mushrooms, pepper or onion, and “W” isn't spelled out.

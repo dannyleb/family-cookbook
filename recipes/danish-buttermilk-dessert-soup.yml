@@ -1,0 +1,28 @@
+title: Danish Buttermilk Dessert Soup
+category: Desserts
+tags: [soup, buttermilk, danish, lemon, summer, chilled, fruit]
+scan: bearnaise-sauce-card.jpg
+
+ingredients:
+  - eggs: 2 well beaten eggs
+  - sugar: Under ¼ cup sugar (card says “<¼ cup”)
+  - vanilla: 1 teasp vanilla
+  - lemon: Juice & grated peel of 1 lemon
+  - buttermilk: 1 qt. buttermilk
+  - fruit: Fresh fruit
+
+steps:
+  - id: eggmix
+    action: BEAT WELL
+    uses: [eggs, sugar, vanilla, lemon]
+    text: Beat the eggs, sugar, vanilla and lemon juice and peel well.
+  - id: frothy
+    action: whisk until frothy
+    uses: [buttermilk]
+    text: Whisk the buttermilk until frothy.
+  - action: add slowly, constantly whisking
+    uses: [frothy, eggmix]
+    text: Add the egg mixture to the buttermilk slowly, whisking constantly.
+  - action: serve with
+    uses: [previous, fruit]
+    text: Serve with fresh fruit.

@@ -1,0 +1,79 @@
+title: Etouffee
+category: Mains
+serves: 4
+tags: [shrimp, cajun, roux, seafood]
+description: The two-beer roux.
+scan: etouffee-card.jpg
+
+ingredients:
+  - shrimp: Shrimp, 2+ lbs., shelled and deveined (save shells to make stock)
+  - butter: One stick of butter
+  - stock: Shrimp/chicken/clam/fish stock, 2¼ cups in any combo
+  - wine: Dry white wine, ¾ cup
+  - onion: Onion, ¼–⅓ cup, finely diced
+  - pepper: Green bell pepper, ¼–⅓ cup, finely diced
+  - celery: Celery, ¼–⅓ cup, finely diced
+  - scallions: Scallions, ¾ to 1 cup, chopped
+  - heading: Roux
+  - flour: Flour, ¾ cup
+  - oil: Vegetable oil, 7 tablespoons
+  - heading: Etouffee spice
+  - paprika: 1 tablespoon paprika
+  - salt: 1½ teaspoons salt
+  - blackpepper: 1 teaspoon black pepper
+  - basil: ½ teaspoon basil
+  - thyme: ½ teaspoon thyme
+
+steps:
+  - id: stockmix
+    action: shell stock + broth to 2¼ cups, add wine; chill
+    uses: [stock, wine]
+    text: >-
+      Boil shrimp shells to make about a cup and a half of stock, add chicken broth or clam
+      juice to make a total of 2¼ cups, add ¾ cup of white wine and set aside the mixture in
+      the fridge.
+  - id: spice
+    action: mix in a small bowl
+    uses: [paprika, salt, blackpepper, basil, thyme]
+    text: Mix all the etouffee spice in a small bowl.
+  - id: roux
+    action: cook over medium, stirring constantly, to peanut-butter color (2 beers)
+    uses: [flour, oil]
+    text: >-
+      Start to cook the roux (flour and oil) in a good size sauté pan over medium heat,
+      stirring and scraping constantly until it eventually turns a peanut butter color (red
+      roux). Be very patient; if you try to cook it too fast it will burn. It will take a
+      while: at least 2 beers. Thus the other name, “two beer roux.”
+  - action: stir in, cook until real soft
+    uses: [roux, onion, pepper, celery]
+    text: >-
+      When the roux is ready, stir in the diced onion, green bell pepper and celery (the
+      trinity) and carefully stir until real soft.
+  - id: gravy
+    action: add, stir to a thick gravy; add HALF the spice; hold on very low
+    uses: [previous, stockmix, spice]
+    text: >-
+      Add the shrimp/clam/chicken broth/wine mixture and stir until a thick gravy. Add HALF of
+      the etouffee spice, stir, and set aside on very, very low heat.
+  - id: sauteed
+    action: melt butter in Dutch oven; sauté shrimp until just about done, with scallions + rest of spice
+    uses: [butter, shrimp, scallions]
+    text: >-
+      In a separate Dutch oven, melt the butter and quickly sauté the shrimp until just about
+      done, adding the chopped scallions and the rest of the spice mix.
+  - action: pour gravy in, stir gently; serve with rice
+    uses: [gravy, sauteed]
+    text: >-
+      POUR the gravy into the shrimp, gently stir a couple of times and serve with rice.
+
+notes: |
+  A simple green salad and a baguette goes good. Serve with lager beer or pale ale or hearty dry white wine.
+
+  This will easily feed 4 people, so you can cut the entire recipe in half if you want. Handwritten on the page, “½ recipe for 2”:
+
+  - 1 lb shrimp, ½ stick butter
+  - ¾ cup shrimp-shell stock, plus broth to reach about 1⅛ cups, plus ⅓ cup wine
+  - ¼ cup (a little less) each onion, pepper and celery; ½ cup scallion
+  - Spice: ½ Tbl paprika, ¾ tsp salt, ½ tsp pepper, ¼ tsp basil, ¼ tsp thyme
+
+  The half-batch notes don't halve the roux. Half would be ⅜ cup flour and 3½ tablespoons oil.

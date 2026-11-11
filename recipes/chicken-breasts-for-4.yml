@@ -1,0 +1,48 @@
+title: Chicken Breasts for 4
+category: Mains
+serves: 4
+tags: [chicken, lemon, white wine, rosemary, skillet, dinner menu]
+scan: chicken-breasts-for-4-card.jpg
+
+ingredients:
+  - chicken: Chicken breasts, for 4
+  - sp: Salt and pepper
+  - flour: ½ c. flour
+  - butter: ½ stick butter
+  - oil: 1 Tbl. oil
+  - wine: 2 Tbl. white wine
+  - broth: ½ [cup] chicken broth
+  - lemon: 2 Tbl. lemon juice
+  - onion: 1 Tbl. finely chopped green onion
+  - parsley: 1 Tbl. parsley
+  - rosemary: ½ tsp. rosemary
+  - wedges: Lemon wedges
+
+steps:
+  - id: seasoned
+    action: season w/ S&P; cover w/ flour
+    uses: [chicken, sp, flour]
+    text: Season the chicken with salt and pepper and cover with flour.
+  - id: fat
+    action: melt in skillet
+    uses: [butter, oil]
+    text: Melt the butter and oil in a skillet.
+  - action: brown; to heated platter
+    uses: [seasoned, fat]
+    text: Brown the chicken and move it to a heated platter.
+  - action: stir in
+    uses: [previous, wine]
+    text: Add the wine to the skillet and stir.
+  - action: add; cover, simmer, stir 3–5 min
+    uses: [previous, broth, lemon, onion, parsley, rosemary]
+    text: Add the other ingredients. Cover and simmer, stirring, 3–5 min.
+  - action: chicken back in; simmer 2 min
+    text: Put the chicken back in and simmer 2 min.
+  - action: serve with
+    uses: [previous, wedges]
+    text: Serve with lemon wedges.
+
+notes: |
+  The page is a whole dinner menu in shorthand: this chicken, [[herbed-rice]], a salad (mushrooms, little tomatoes, alfalfa sprouts, creamy dressing), broccoli, and 2 bottles of Chardonnay. Plus the shopping list.
+
+  “½ chicken broth” has no unit on the card; ½ cup is the likely reading.

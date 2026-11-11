@@ -1,0 +1,61 @@
+title: Orange Shortbread Wedges with Mincemeat Filling
+category: Cookies
+from: Bon Appétit (September 1985)
+serves: Makes 22
+tags: [cookies, shortbread, mincemeat, orange, gingersnap, holiday, christmas]
+
+before:
+  - Line one baking sheet with foil and another with parchment. Draw a 10-inch circle on each.
+
+ingredients:
+  - flour: 2¼ cups all purpose flour
+  - salt: ¾ teaspoon salt
+  - sugar: ¾ cup superfine sugar
+  - peel: 4 teaspoons finely grated orange peel
+  - butter: 1 cup (2 sticks) unsalted butter, room temperature
+  - liqueur: 1 tablespoon orange liqueur
+  - oj: 2 teaspoons fresh orange juice
+  - lemon: 1 teaspoon fresh lemon juice
+  - vanilla: 1 teaspoon vanilla
+  - extract: 3 drops of orange extract
+  - gingersnaps: 3 gingersnap cookies, crushed to crumbs
+  - mincemeat: 6 ounces condensed mincemeat, finely crumbled
+
+steps:
+  - id: dry
+    action: combine
+    uses: [flour, salt]
+    text: Combine the flour and salt.
+  - id: orangesugar
+    action: processor 10 sec
+    uses: [sugar, peel]
+    text: Whirl the sugar and orange peel in a processor for 10 seconds.
+  - action: cream
+    uses: [butter, orangesugar]
+    text: With an electric mixer, cream the butter with the sugar mixture.
+  - action: blend in (spatula)
+    uses: [previous, liqueur, oj, lemon, vanilla, extract]
+    text: With a spatula, blend in the liqueur, juices, vanilla and orange extract.
+  - action: fold in; halve the dough
+    uses: [previous, dry]
+    text: >-
+      Fold in the flour mixture. Divide the dough in half. Press one half onto the foil
+      circle and chill it; press the other half onto the parchment circle.
+  - action: sprinkle on parchment half; flip foil half on top; seal edges
+    uses: [previous, gingersnaps, mincemeat]
+    text: >-
+      Sprinkle the parchment half with the gingersnap crumbs, then the mincemeat. Flip the
+      chilled half on top, peel off the foil, press firmly and seal the edges to enclose the
+      filling. Straighten the edges.
+  - action: score 6 inner + 16 outer wedges; prick; ring on; crimp
+    text: >-
+      Center a rack and preheat to 300°F. Cut a 5-inch circle in the center (straight up and
+      down, through the dough). Cut the inner circle into 6 wedges and the outer ring into 16.
+      Prick each wedge 4 times with a toothpick. Put an inverted 10-inch springform ring around
+      it and press the dough out to the ring. Press fork tines around the edges of both circles.
+  - action: bake 30 min; ring off; 10–15 min more
+    text: Bake 30 minutes. Remove the springform ring and bake until the outer edges are lightly golden, 10 to 15 minutes.
+  - action: mark wedges (don't separate); cool; wrap; rest 1 day
+    text: >-
+      Slide the parchment onto a rack. Re-cut the wedge lines without separating them. Cool
+      completely, wrap in foil and let stand 1 day. Separate into wedges to serve.

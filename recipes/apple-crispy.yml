@@ -1,0 +1,35 @@
+title: Apple Crispy
+category: Desserts
+from: Gramma Florence
+serves: 6
+tags: [apples, crisp, cinnamon, fall]
+scan: apple-crispy-card.jpg
+
+ingredients:
+  - heading: For the apples
+  - apples: 2 lbs apples
+  - cinn: 1 tsp cinn.
+  - water: ⅔ c. water
+  - heading: Topping
+  - marg: 4 T. marg.
+  - sugar: 8–12 T sugar (¾ c. written in beside it)
+  - flour: 6 T. flour (½ c. written in beside it)
+  - salt: Pinch salt
+
+steps:
+  - id: fruit
+    action: apples + cinnamon + water [in baking dish]
+    uses: [apples, cinn, water]
+    text: Put the apples in a baking dish with the cinnamon and water.
+  - id: crumbs
+    action: work together until crumbly
+    uses: [marg, sugar, flour, salt]
+    text: Work the margarine, sugar, flour and salt together until crumbly.
+  - action: "[crumb over apples]; bake 350° 45 min"
+    uses: [fruit, crumbs]
+    text: Top the apples with the crumb mixture and bake at 350° for 45 min.
+
+notes: |
+  The card is ingredients plus “for apples”, “work together until crumbly” and the bake time. Putting it in a baking dish and topping the apples are the obvious steps, added here.
+
+  Later amounts are written in next to the sugar (¾ c.) and flour (½ c.). 12 T is ¾ c., so the sugar note matches the top of the range; ½ c. of flour is a bit more than 6 T.

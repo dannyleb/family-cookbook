@@ -1,0 +1,51 @@
+title: Grandma Sullivan's Chocolate Molasses Cookies
+category: Cookies
+from: Great Great Grandma Sullivan
+tags: [cookies, chocolate, molasses, rolled cookies, heritage]
+description: Your great, great grandmother's recipe for cookies. Rolled.
+scan: grandma-sullivans-chocolate-molasses-cookies-card.jpg
+
+ingredients:
+  - chocolate: 2 sqs. baking chocolate
+  - crisco: ½ cup Crisco
+  - egg: 1 egg
+  - water: ¼ c. hot water
+  - soda: 1 teasp. baking soda
+  - molasses: 1 cup molasses
+  - salt: Pinch salt
+  - vanilla: 1 teasp. vanilla
+  - flour: 3½ c. flour
+  - sugar: ½ c. sugar
+  - frosting: Thin white frosting
+
+steps:
+  - action: melt together
+    uses: [chocolate, crisco]
+    text: Melt the chocolate and Crisco together.
+  - action: add melted mixture
+    uses: [flour, previous]
+    text: Measure the flour. Add the melted mixture.
+  - action: add
+    uses: [previous, water, egg]
+    text: Add the HOT water and egg.
+  - action: add
+    uses: [previous, molasses]
+    text: Then add the molasses.
+  - action: add
+    uses: [previous, sugar, soda, salt]
+    text: Add the sugar, baking SODA and salt.
+  - action: add; if too sticky, a little more flour
+    uses: [previous, vanilla]
+    text: Add the vanilla. If too sticky, add a little bit more flour.
+  - action: form into ball; refrigerate ~1 hr
+    text: Form into a ball and refrigerate about 1 hr.
+  - action: roll out; bake 10 min @ 375°
+    text: Roll out, cut, and bake 10 min. at 375°.
+  - action: frost (thin)
+    uses: [previous, frosting]
+    text: Frost with thin white frosting (note from Mom).
+
+notes: |
+  The intro letter says the Great Great Grandmother Sullivan recipe is in Grammi Jan's handwriting.
+
+  The card puts “Form into ball – refrig. abt 1 hr” at the very end, in brackets. It goes before rolling, so it's moved there above. The card only says “(Rolled)” and “10 min. @ 375°”; rolling thickness and cutter size aren't given.

@@ -1,0 +1,44 @@
+title: Grandmother's Famous Cranberry Bread
+category: Breads
+from: Parents' Magazine
+tags: [cranberry, quick bread, orange, raisins, muffins, holiday]
+description: (Get Mother to help)
+
+before:
+  - Grease a 9×5×3-inch loaf pan. Oven to 350°.
+
+ingredients:
+  - flour: 2 cups sifted all-purpose flour
+  - sugar: 1 cup sugar
+  - bp: 1½ teaspoons baking powder
+  - salt: 1 teaspoon salt
+  - soda: ½ teaspoon baking soda
+  - butter: ¼ cup butter or margarine
+  - egg: 1 egg, beaten
+  - peel: 1 teaspoon grated orange peel
+  - oj: ¾ cup orange juice
+  - raisins: 1½ cups light raisins
+  - cranberries: 1½ cups fresh or frozen cranberries, chopped
+
+steps:
+  - action: sift into a large bowl
+    uses: [flour, sugar, bp, salt, soda]
+    text: Sift the flour, sugar, baking powder, salt and baking soda into a large bowl.
+  - action: cut in until crumbly
+    uses: [previous, butter]
+    text: Cut in the butter until the mixture is crumbly.
+  - action: add all at once; stir just until moist
+    uses: [previous, egg, peel, oj]
+    text: Add the egg, orange peel and orange juice all at once and stir just until evenly moistened.
+  - action: fold in
+    uses: [previous, raisins, cranberries]
+    text: Fold in the raisins and cranberries.
+  - action: bake 350° 1 hr 10 min (muffins 20 min)
+    text: Spoon into the loaf pan and bake about 1 hour 10 minutes, until a toothpick in the center comes out clean.
+  - action: unmold; cool on rack
+    text: Take it out of the pan and cool on a wire rack.
+
+notes: |
+  Handwritten next to the bake time: “20 min. muffins.”
+
+  The clipping says you can swap the raisins for more cranberries for an all-cranberry bread.

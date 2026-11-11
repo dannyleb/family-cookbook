@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Family Cookbook</title>
+  <meta name="description" content="Our family recipes, searchable and easy to cook from.">
+  <meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Source+Sans+3:ital,wght@0,400..700;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <main id="main">
+    <section id="home" class="view" hidden>
+      <header class="hero wrap">
+        <h1 id="book-title">Family Cookbook</h1>
+        <p id="book-subtitle" class="hero-sub"></p>
+        <nav id="extras" class="extras" aria-label="From the binder" hidden></nav>
+      </header>
+
+      <div class="finder">
+        <div class="wrap">
+          <div class="search">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="search" type="search" placeholder="Search recipes, ingredients, people…" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search recipes">
+          </div>
+          <div id="chips" class="chips" role="toolbar" aria-label="Filter by category"></div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <p id="count" class="count" aria-live="polite"></p>
+        <div id="results" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="recipe" class="view" hidden></section>
+
+    <p id="status" class="status wrap">Loading recipes…</p>
+  </main>
+</body>
+</html>

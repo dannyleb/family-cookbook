@@ -1,0 +1,25 @@
+title: Fish Blackening Powder
+category: Sauces & Extras
+tags: [fish, cajun, spice rub, blackened, redfish, catfish, tilapia]
+description: For blackened red fish, catfish, tilapia.
+scan: etouffee-card.jpg
+
+ingredients:
+  - paprika: 1 tablespoon paprika
+  - salt: 2 teaspoons salt
+  - onion: 1 teaspoon onion powder
+  - garlic: 1 teaspoon garlic powder
+  - cayenne: 1 teaspoon cayenne pepper
+  - peppers: ¾ teaspoon each white pepper and black pepper (or 1½ of black pepper)
+  - herbs: ½ teaspoon each thyme and oregano
+  - fish: Red fish, catfish or tilapia
+
+steps:
+  - action: mix
+    uses: [paprika, salt, onion, garlic, cayenne, peppers, herbs]
+    text: Mix the powder.
+  - action: spread on both sides
+    uses: [previous, fish]
+    text: Spread on both sides of the fish.
+  - action: sear in pan until done
+    text: Sear in a pan until done (it's going to make a lot of smoke).

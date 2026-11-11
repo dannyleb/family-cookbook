@@ -1,0 +1,34 @@
+title: Good Old-Fashioned Pancakes
+category: Breakfast
+from: Allrecipes (printout with family notes)
+time: 20 min
+tags: [pancakes, breakfast, griddle, nikki]
+
+ingredients:
+  - flour: 1½ cups all-purpose flour (Nikki uses 1 cup whole wheat or oatmeal flour + ½ cup all-purpose)
+  - bp: 3½ teaspoons baking powder
+  - sugar: 1 tablespoon white sugar
+  - salt: ¾ teaspoon salt, or ½ (printed amount crossed out; Nikki likes ¾)
+  - milk: 1¼ cups milk
+  - butter: 3 tablespoons butter, melted (or coconut oil)
+  - egg: 1 egg (Nikki likes 2)
+  - vanilla: Vanilla (added by hand; the ×3 batch uses 1 tbsp, so about 1 tsp)
+
+steps:
+  - action: sift together
+    uses: [flour, bp, sugar, salt]
+    text: Sift the flour, baking powder, sugar and salt together in a large bowl.
+  - action: make a well; add; mix until smooth
+    uses: [previous, milk, butter, egg, vanilla]
+    text: Make a well in the center, add the milk, melted butter, egg and vanilla, and mix until smooth.
+  - action: ¼ cup each on oiled griddle, med-high; 2–3 min, flip, brown
+    text: >-
+      Heat a lightly oiled griddle over medium-high heat. Pour about ¼ cup batter per
+      pancake. Cook until bubbles form and the edges are dry, 2–3 minutes, then flip and cook
+      until browned.
+
+notes: |
+  Handwritten triple batch (×3):
+
+  - 4.5 c flour, 10.5 tsp baking powder, 3 tbsp sugar, 1.5 tsp salt
+  - 3¾ [c] milk, 9 tbsp butter or coconut oil, 3–6 eggs, 1 tbsp vanilla
