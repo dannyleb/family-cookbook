@@ -1,0 +1,17 @@
+# Site-wide settings.
+title: Family Cookbook
+subtitle: Our recipes, off the index cards and onto every phone.
+
+# Order of the category filter chips. Categories not listed here
+# are added after these, alphabetically.
+categories:
+  - Breakfast
+  - Appetizers
+  - Soups & Stews
+  - Salads
+  - Mains
+  - Sides
+  - Breads
+  - Desserts
+  - Drinks
+  - Sauces & Extras

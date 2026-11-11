@@ -1,0 +1,13 @@
+{
+  "name": "family-cookbook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "serve": "node scripts/build.mjs && node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "5.4.3"
+  }
+}
