@@ -1,0 +1,50 @@
+title: Almond Mincemeat Shortbread Pinwheels
+category: Cookies
+tags: [cookies, shortbread, mincemeat, almonds, amaretto, pinwheels, holiday, christmas]
+scan: almond-mincemeat-shortbread-pinwheels-card.jpg
+
+ingredients:
+  - heading: Shortbread
+  - butter: 1 stick butter
+  - sugar: ⅜ cup superfine sugar
+  - water: 1 teaspoon water (see notes)
+  - almond: 1 teaspoon almond extract
+  - amaretto: ½ tablespoon Amaretto
+  - salt: ½ teaspoon salt
+  - flour: 1⅛ cup flour
+  - heading: Filling
+  - mincemeat: 3 oz finely chopped mincemeat
+  - almonds: ⅓ cup finely chopped almonds
+  - molasses: 1 teaspoon molasses (see notes)
+  - honey: 1 teaspoon honey
+  - ginger: 1 teaspoon ginger powder
+
+steps:
+  - action: cream
+    uses: [butter, sugar]
+    text: Cream the butter and superfine sugar.
+  - action: add
+    uses: [previous, water, almond, amaretto]
+    text: Add the water, almond extract and Amaretto.
+  - action: add; roll into ball; chill slightly
+    uses: [previous, salt, flour]
+    text: Add the salt and flour and roll into a ball. Chill slightly.
+  - id: sheet
+    action: roll out ~9×12 square on waxed paper
+    text: Roll out a square (approximately 9×12) on waxed paper.
+  - id: filling
+    action: mix
+    uses: [mincemeat, almonds, molasses, honey, ginger]
+    text: Mix the mincemeat, almonds, molasses, honey and ginger.
+  - action: spread on surface
+    uses: [sheet, filling]
+    text: Spread the mixture on the surface of the dough.
+  - action: roll into cylinder (waxed paper); cut ⅓-in cookies
+    text: Use the waxed paper to roll it into a cylinder. Cut cookies ⅓ inch thick.
+  - action: bake 300° 20–30 min, until browned
+    text: Place on waxed paper on a baking sheet and bake about 20–30 min at 300°, or until browned.
+
+notes: |
+  The “1” for the water and for the molasses is written over another number on the card (the water line still says “teaspoons”).
+
+  It's written over a copy of the Bon Appétit page with [[orange-shortbread-wedges-with-mincemeat-filling]], which looks like where it started.

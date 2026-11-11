@@ -1,0 +1,33 @@
+title: Cheddar Potato Casserole
+category: Sides
+tags: [potatoes, casserole, cheddar, sour cream, make ahead]
+description: Start the potatoes a day ahead.
+scan: cheesy-potatoes-card.jpg
+
+ingredients:
+  - potatoes: 8 med. potatoes, boiled & skinned
+  - sourcream: 2 cups sour cream
+  - saltpepper: ½ teaspoon salt / pepper to taste
+  - onion: ½ onion, minced
+  - butter: 6 tablespoons butter
+  - cheese: 2 cups shredded cheddar cheese
+
+steps:
+  - id: spuds
+    action: boil & skin 24 hrs ahead
+    uses: [potatoes]
+    text: Do the potatoes 24 hrs ahead.
+  - action: melt; take out 2 Tbsp for the top
+    uses: [butter]
+    text: Melt the butter. Take out 2 tablespoons.
+  - action: mix with remaining butter; off heat; add other ingredients
+    uses: [previous, cheese, sourcream, saltpepper, onion]
+    text: Mix the cheese with the remaining butter. Remove from heat and add the other ingredients.
+  - action: grate potatoes into mixture
+    uses: [previous, spuds]
+    text: Grate the potatoes into the mixture.
+  - action: casserole; remaining butter on top; bake 350° 45–50 min
+    text: Put into a casserole dish, sprinkle the remaining butter on top and bake at 350° for 45–50 min.
+
+notes: |
+  The card has no title (it's two cards, front and back). “Cheddar Potato Casserole” is a placeholder name.

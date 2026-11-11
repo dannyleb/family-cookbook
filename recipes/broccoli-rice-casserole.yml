@@ -1,0 +1,25 @@
+title: Broccoli Rice Casserole
+category: Sides
+tags: [broccoli, rice, casserole, cheese whiz, holiday]
+scan: broccoli-rice-casserole-card.jpg
+
+ingredients:
+  - broccoli: 2 pkgs. chopped brocc[oli]
+  - onion: 1 med. onion
+  - marg: ½ stick margarine
+  - soup: 1 can cream of mushroom soup
+  - whiz: 1 sm. jar Cheese Whiz
+  - rice: 1 cup Minute Rice
+
+steps:
+  - action: sauté
+    uses: [onion, marg]
+    text: Sauté the onion in the margarine.
+  - action: add; stir till separated
+    uses: [previous, broccoli]
+    text: Add the broccoli and stir till separated.
+  - action: add other stuff, mix all up
+    uses: [previous, soup, whiz, rice]
+    text: Add the other stuff and mix all up.
+  - action: casserole; bake 40 min at 350°
+    text: Put in a casserole dish and bake 40 min at 350°.

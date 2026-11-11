@@ -1,0 +1,69 @@
+title: Blueberry Coffeecake
+category: Breakfast
+from: Can't Stay Out of the Kitchen (blog)
+serves: 16
+time: 1½ hours
+tags: [coffeecake, blueberries, bundt, cinnamon, sour cream, brunch]
+description: Bundt coffeecake with two blueberry-cinnamon layers and a powdered sugar drizzle.
+
+before:
+  - Generously grease and flour a 10-inch bundt pan.
+  - Preheat oven to 350°.
+
+ingredients:
+  - blueberries: 2 12-oz. pkg. blueberries, fresh or frozen
+  - eggs: 4 eggs, large
+  - bp: 1½ tsp baking powder
+  - soda: ¾ tsp baking soda
+  - brownsugar: ¼ cup brown sugar, packed
+  - cinnamon: ½ tsp cinnamon
+  - flour: 3 cups flour, unbleached
+  - flour1: 1 tbsp flour (the rest of 3 1/16 cups)
+  - powdered: 1 cup powdered sugar
+  - salt: ¼ tsp salt
+  - sugar: 1½ cups sugar
+  - vanilla: 1 tsp vanilla extract
+  - butter: ¾ cup butter, unsalted
+  - milk: 1 tbsp milk
+  - sourcream: 1 cup sour cream
+
+steps:
+  - id: dry
+    action: mix; set aside
+    uses: [flour, bp, soda, salt]
+    text: Mix the flour with the baking powder, soda and salt.
+  - id: streusel
+    action: mix well
+    uses: [brownsugar, flour1, cinnamon]
+    text: In a small bowl, mix the brown sugar, 1 tbsp flour and cinnamon.
+  - action: beat medium until fluffy
+    uses: [butter, sugar, vanilla]
+    text: With an electric mixer at medium speed, beat the butter, sugar and vanilla until fluffy.
+  - action: add 1 at a time
+    uses: [previous, eggs]
+    text: Add the eggs one at a time, beating after each.
+  - action: low; flour in 3 parts, sour cream in 2
+    uses: [previous, dry, sourcream]
+    text: At low speed, beat in the flour mixture in three additions alternating with the sour cream in two, just until combined.
+  - action: ⅓ batter, ½ berries, ½ sugar mix; repeat; batter on top
+    uses: [previous, blueberries, streusel]
+    text: >-
+      Spread a third of the batter in the pan. Sprinkle with half the blueberries and half the
+      brown sugar mixture. Repeat, ending with the last of the batter.
+  - action: bake ~60 min+ (knife test)
+    text: Bake until a knife in the center comes out clean. See notes on timing.
+  - id: cake
+    action: cool 20 min in pan; unmold
+    text: Cool in the pan on a wire rack 20 minutes, then gently remove from the pan.
+  - id: icing
+    action: mix until smooth
+    uses: [powdered, milk]
+    text: Mix the powdered sugar and milk until smooth.
+  - action: drizzle over
+    uses: [cake, icing]
+    text: Drizzle over the cake.
+
+notes: |
+  The recipe says 60 minutes, but it usually takes about 1 hour 15–20 minutes. Push the knife all the way to the bottom of the pan to check; if it isn't clean, keep baking.
+
+  Also good with raspberries.

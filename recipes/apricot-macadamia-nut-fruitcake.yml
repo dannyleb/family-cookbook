@@ -1,0 +1,56 @@
+title: Apricot-Macadamia Nut Fruitcake
+category: Desserts
+from: Lily Chu, San Francisco (magazine clipping)
+serves: 8 to 10
+tags: [fruitcake, apricots, macadamia, raisins, holiday, christmas, cake]
+
+before:
+  - Preheat oven to 275°F. Grease and flour a 6-cup bundt pan.
+
+ingredients:
+  - butter: ¾ cup (1½ sticks) butter
+  - sugar: 1 cup sugar
+  - yolks: 3 egg yolks (from 3 eggs, separated)
+  - whites: 3 egg whites
+  - milk: ½ cup milk
+  - brandy: 2 tablespoons apricot brandy
+  - vanilla: ½ teaspoon vanilla
+  - flour: 1¾ cups sifted all purpose flour
+  - apricots: 1 cup chopped dried apricots
+  - raisins: 1 cup golden raisins
+  - nuts: 1 cup chopped, roasted and salted macadamia nuts
+  - tartar: ¼ teaspoon cream of tartar
+
+steps:
+  - action: cream (electric mixer)
+    uses: [butter, sugar]
+    text: Cream the butter and sugar in a large mixer bowl.
+  - id: base
+    action: beat yolks; add
+    uses: [previous, yolks]
+    text: Beat the yolks to blend and add to the butter mixture.
+  - id: wet
+    action: combine
+    uses: [milk, brandy, vanilla]
+    text: Combine the milk, brandy and vanilla in a small bowl.
+  - action: add alternately with flour, 4 batches
+    uses: [base, wet, flour]
+    text: Add the milk mixture to the butter alternately with the flour in 4 batches, mixing well after each.
+  - id: batter
+    action: stir in
+    uses: [previous, apricots, raisins, nuts]
+    text: Stir in the apricots, raisins and nuts.
+  - id: meringue
+    action: beat to soft peaks; add tartar; beat stiff, not dry
+    uses: [whites, tartar]
+    text: Beat the whites to soft peaks, add the cream of tartar and keep beating until stiff but not dry.
+  - action: fold in gently
+    uses: [batter, meringue]
+    text: Gently fold the whites into the batter.
+  - action: bake ~2¼ hr, until tester is clean
+    text: Spread evenly in the pan and bake until a tester comes out clean, about 2¼ hours.
+  - action: cool in pan; slice
+    text: Cool completely in the pan on a rack. Slice and serve, or wrap airtight and keep at room temperature.
+
+notes: |
+  From the clipping: her brother's wife gave it to her one Christmas, she loved it, and then had to wait years for the recipe. Good at room temperature or warm, with a cup of hot apricot tea.

@@ -1,0 +1,56 @@
+title: Chocolate Fruitcake
+category: Desserts
+from: Bon Appétit (November 1987)
+serves: 10
+tags: [fruitcake, chocolate, grand marnier, walnuts, holiday, christmas, cake]
+description: Start eight days ahead so the flavors can mellow.
+
+ingredients:
+  - liqueur: 1 cup Grand Marnier or other orange liqueur
+  - pineapple: 1 cup ½-inch wedges candied pineapple
+  - apricots: ¾ cup ½-inch pieces dried apricots
+  - raisins: ¾ cup raisins
+  - panflour: All purpose flour (for the pan)
+  - flour: ½ cup plus 2 tablespoons all purpose flour
+  - cocoa: ¼ cup plus 2 tablespoons unsweetened cocoa powder (preferably Dutch process)
+  - bp: ½ teaspoon baking powder
+  - walnuts: 1 cup chopped walnuts (about 4½ ounces)
+  - butter: ½ cup (1 stick) unsalted butter, room temperature
+  - sugar: ⅔ cup sugar
+  - eggs: 3 eggs, room temperature
+
+steps:
+  - action: cover; stand 2 days, stirring now and then
+    uses: [liqueur, pineapple, apricots, raisins]
+    text: Combine the liqueur and fruit in a bowl. Cover and let stand 2 days, stirring occasionally.
+  - id: fruit
+    action: drain through sieve (keep the liquid)
+    text: Drain through a fine sieve, pressing gently. Save the liquid; put the fruit in a bowl.
+  - id: dry
+    action: sift; mix in walnuts
+    uses: [flour, cocoa, bp, walnuts]
+    text: Sift the flour, cocoa and baking powder into a small bowl. Mix in the walnuts.
+  - action: cream until fluffy
+    uses: [butter, sugar]
+    text: With an electric mixer, cream the butter and sugar until light and fluffy.
+  - action: add 1 at a time
+    uses: [previous, eggs]
+    text: Add the eggs one at a time, blending well after each.
+  - id: batter
+    action: fold in flour mix, then fruit
+    uses: [previous, dry, fruit]
+    text: Gently fold in the flour mixture, then the fruit.
+  - id: pan
+    action: butter & flour 8½×4½×2½-in loaf pan
+    uses: [panflour]
+    text: Preheat the oven to 325°F. Butter and flour an 8½×4½×2½-inch loaf pan.
+  - action: bake 325°F ~50 min
+    uses: [batter, pan]
+    text: Spoon the batter into the pan and bake until a tester in the center comes out clean, about 50 minutes.
+  - action: brush with ¼ cup saved liquid; cool in pan
+    text: Brush the top of the warm cake with ¼ cup of the saved soaking liquid. Cool completely in the pan on a rack.
+  - action: unmold; wrap; mellow 6 days
+    text: Unmold, wrap in plastic and keep in an airtight container. Let it mellow 6 days before serving.
+
+notes: |
+  Keeps 1 month at room temperature, or 3 months frozen.

@@ -1,0 +1,35 @@
+title: 5 Minute Chocolate Mug Cake
+category: Desserts
+time: 5 min
+serves: 1 mug
+tags: [chocolate, cake, microwave, quick, mug cake]
+description: A South African favourite. The most dangerous cake recipe in the world, because now you're always 5 minutes away from chocolate cake.
+
+ingredients:
+  - mug: 1 large coffee mug
+  - flour: 4 tbsp. flour
+  - sugar: 4 tbsp. sugar
+  - cocoa: 2 tbsp. cocoa
+  - egg: 1 egg
+  - milk: 3 tbsp. milk
+  - oil: 3 tbsp. oil
+  - vanilla: A small splash of vanilla extract
+  - chips: 3 tablespoons chocolate chips (optional)
+
+steps:
+  - action: mix in mug
+    uses: [mug, flour, sugar, cocoa]
+    text: Put the dry ingredients in the mug and mix well.
+  - action: mix thoroughly
+    uses: [previous, egg]
+    text: Add the egg and mix thoroughly.
+  - action: mix well
+    uses: [previous, milk, oil]
+    text: Pour in the milk and oil and mix well.
+  - action: mix again
+    uses: [previous, chips, vanilla]
+    text: Add the chocolate chips (if using) and vanilla, and mix again.
+  - action: microwave 3 min on high (1000 W)
+    text: Microwave 3 minutes at 1000 watts (high). It will rise over the top of the mug. Don't be alarmed.
+  - action: cool a little; tip out if you like
+    text: Let it cool a little and tip it out onto a plate if you like.

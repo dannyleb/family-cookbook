@@ -1,0 +1,61 @@
+title: Certosino
+category: Desserts
+from: Biba Caggiano, Bon Appétit (December 1984)
+serves: 12
+tags: [fruitcake, italian, bologna, honey, marsala, almonds, holiday, christmas]
+description: Fruitcake from Bologna.
+
+before:
+  - Preheat oven to 350°F. Butter a 10-inch springform pan.
+
+ingredients:
+  - raisins: ½ cup golden raisins
+  - marsala: ¾ cup Marsala
+  - citron: ⅔ cup candied citron
+  - cherries: ⅓ cup candied cherries
+  - almonds: ⅔ cup blanched almonds, coarsely chopped
+  - pinenuts: ½ cup pine nuts
+  - chocolate: 2 ounces semisweet chocolate, coarsely chopped
+  - cinnamon: 1 teaspoon cinnamon
+  - anise: 1 teaspoon aniseed
+  - honey: 1 cup honey
+  - sugar: ¾ cup sugar
+  - butter: 3 tablespoons butter
+  - flour: 2 cups all purpose flour
+  - soda: 2 teaspoons baking soda
+  - whole: ⅓ cup whole blanched almonds
+
+steps:
+  - id: soaked
+    action: soak 20 min; drain (keep the Marsala)
+    uses: [raisins, marsala]
+    text: Soak the raisins in the Marsala 20 minutes, stirring now and then. Drain, saving the Marsala.
+  - id: chopped
+    action: chop; set aside ⅓ cup for the top
+    uses: [citron, cherries]
+    text: Coarsely chop the citron and cherries. Set aside ⅓ cup for decorating.
+  - id: fruitnut
+    action: combine with the raisins
+    uses: [chopped, almonds, pinenuts, chocolate, cinnamon, anise, soaked]
+    text: Combine the rest of the fruit with the chopped almonds, pine nuts, chocolate, cinnamon, aniseed and drained raisins.
+  - action: with saved Marsala, low until sugar dissolves; boil 1 min; cool 5 min
+    uses: [honey, sugar, butter]
+    text: >-
+      Heat the honey, sugar, butter and saved Marsala in a heavy saucepan over low heat,
+      swirling now and then, until the sugar dissolves. Boil 1 minute, then cool 5 minutes.
+  - action: add flour + soda
+    uses: [previous, flour, soda]
+    text: Combine the flour and baking soda and add to the honey mixture.
+  - action: blend in
+    uses: [previous, fruitnut]
+    text: Blend in the fruit and nut mixture.
+  - action: spread in pan (wet spatula); bake ~45 min
+    text: Spread evenly in the pan with a moistened spatula. Bake until the cake pulls away from the sides, about 45 minutes.
+  - action: cool; unmold; trim
+    text: Cool completely before removing from the pan. Trim the edges if needed.
+  - action: top with saved fruit + whole almonds
+    uses: [previous, whole]
+    text: Before serving, arrange the saved fruit and whole almonds on top.
+
+notes: |
+  Serve with dessert wine or chilled Asti Spumante. Keeps 2 weeks wrapped in foil at room temperature.

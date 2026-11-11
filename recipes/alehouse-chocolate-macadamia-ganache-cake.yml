@@ -1,0 +1,58 @@
+title: Alehouse Chocolate Macadamia Ganache Cake
+category: Desserts
+tags: [chocolate, cake, macadamia, ganache, layer cake]
+description: Aka The Best Chocolate Cake Ever by Janine's Mom.
+scan: alehouse-chocolate-macadamia-ganache-cake-card.jpg
+
+before:
+  - Grease and flour 2 8-inch round cake pans.
+  - Preheat oven to 350°.
+
+ingredients:
+  - heading: Cake
+  - unsweetened: 4 squares unsweetened chocolate
+  - water: 2 cups hot water
+  - margarine: ½ cup margarine
+  - salt: A pinch of salt
+  - sugar1: 2 cups sugar
+  - flour: 2 cups flour
+  - eggs: 2 eggs
+  - soda: 2 teaspoons baking soda
+  - vanilla1: 2 teaspoons vanilla
+  - heading: Topping
+  - cream: 1 cup heavy cream
+  - butter: ¼ cup butter
+  - sugar2: ½ cup sugar
+  - corn: 2 tablespoons corn syrup
+  - semisweet: 4 squares semi-sweet baking chocolate
+  - vanilla2: 1 teaspoon vanilla
+  - nuts: 7 ounces chopped macadamia nuts
+
+steps:
+  - action: heat until dissolved; add salt; cool
+    uses: [unsweetened, water, margarine, salt]
+    text: Heat the chocolate, hot water and margarine until dissolved. Add a pinch of salt and cool.
+  - action: add, mix
+    uses: [previous, sugar1, flour, eggs, soda, vanilla1]
+    text: Add the sugar, flour, eggs, baking soda and vanilla.
+  - id: layers
+    action: bake 350° ~30 min (toothpick); cool
+    text: Pour into the prepared pans and bake at 350° for approximately 30 min. Check with a toothpick. Let cool.
+  - action: boil at medium 5 min, stirring constantly, until dark, thick and smooth
+    uses: [cream, butter, sugar2, corn, semisweet]
+    text: Heat the topping ingredients to a boil at medium heat, 5 minutes, stirring constantly until dark, thick and smooth.
+  - action: stir in; cool 5–10 min
+    uses: [previous, vanilla2]
+    text: Add the vanilla and stir. Cool 5–10 minutes.
+  - id: topping
+    action: add
+    uses: [previous, nuts]
+    text: Add the chopped macadamia nuts.
+  - action: layer, ⅓ topping, layer, rest of topping; smooth
+    uses: [layers, topping]
+    text: >-
+      Put one of the cake layers on a cake server and pour around a third of the topping on
+      it. Place the other cake layer and pour the rest of the topping on it; smooth as
+      necessary.
+  - action: let sit at least 1 hr
+    text: Let sit at least an hour. Serve and watch people throw hands over the last piece.

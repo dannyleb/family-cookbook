@@ -57,5 +57,9 @@ build (validation + table layout).
 
 - The binder's sections (from its cover): Dad, Mom, Gramma Urs, Grammi Jan, Gramma Fi Fi,
   Great Great Grandma Sullivan, Adaptations, Essay on beer and wine.
-- Who wrote which page isn't known yet; leave `from` blank unless the user says, or the page
-  is from a published source.
+- Who wrote which page isn't known yet; leave `from` blank unless the user says, the page
+  names the person (e.g. "Gramma Florence"), or it's from a published source.
+- Only magazine recipes the family circled/boxed get transcribed; other recipes on the same
+  page are skipped unless the user asks.
+- The "essay on beer and wine" page is a personal email with a full name and email address.
+  Don't publish those.

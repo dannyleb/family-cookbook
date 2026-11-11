@@ -1,0 +1,25 @@
+title: Sweet Potato Casserole
+category: Sides
+tags: [sweet potatoes, yams, apples, pecans, casserole, thanksgiving, holiday]
+scan: broccoli-rice-casserole-card.jpg
+
+ingredients:
+  - apples: 2 apples, sliced
+  - pecans: ⅓ cup chopped pecans
+  - brownsugar: ½ cup brown sugar
+  - cinn: ½ teaspoon cinn.
+  - yams: 2 17 oz. cans (Royal Prince) yams, drained
+  - marg: ¼ cup Parkay marg.
+
+steps:
+  - action: toss
+    uses: [apples, pecans, brownsugar, cinn]
+    text: Toss the apples and pecans with the brown sugar and cinnamon.
+  - action: alternate layers in 1½ qt. casserole
+    uses: [previous, yams]
+    text: Alternate layers of apples and yams in a 1½ quart casserole.
+  - action: dot with
+    uses: [previous, marg]
+    text: Dot with margarine.
+  - action: bake covered 350° 35–40 min
+    text: Bake covered at 350° for 35–40 min.
