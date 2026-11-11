@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Family Cookbook</title>
   <meta name="description" content="Our family recipes, searchable and easy to cook from.">
-  <meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5efe3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12161f" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Source+Sans+3:ital,wght@0,400..700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400..600;1,400..500&family=Pinyon+Script&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
 </head>
@@ -21,11 +21,15 @@
 
   <main id="main">
     <section id="home" class="view" hidden>
-      <header class="hero wrap">
-        <h1 id="book-title">Family Cookbook</h1>
-        <p id="book-subtitle" class="hero-sub"></p>
-        <nav id="extras" class="extras" aria-label="From the binder" hidden></nav>
-      </header>
+      <div class="hero-band">
+        <header class="hero wrap">
+          <p id="book-kicker" class="kicker" hidden></p>
+          <h1 id="book-title">Family Cookbook</h1>
+          <svg class="ornament" viewBox="0 0 200 20" aria-hidden="true"><path d="M10 10H78M122 10H190" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="6" cy="10" r="1.6" fill="currentColor"/><circle cx="194" cy="10" r="1.6" fill="currentColor"/><path d="M87 6.5 90.5 10 87 13.5 83.5 10ZM113 6.5 116.5 10 113 13.5 109.5 10Z" fill="currentColor"/><g fill="currentColor"><ellipse cx="100" cy="4.6" rx="2.3" ry="4"/><ellipse cx="100" cy="15.4" rx="2.3" ry="4"/><ellipse cx="94.6" cy="10" rx="4" ry="2.3"/><ellipse cx="105.4" cy="10" rx="4" ry="2.3"/></g><circle cx="100" cy="10" r="1.5" fill="var(--bg)"/></svg>
+          <p id="book-subtitle" class="hero-sub"></p>
+          <nav id="extras" class="extras" aria-label="From the binder" hidden></nav>
+        </header>
+      </div>
 
       <div class="finder">
         <div class="wrap">
@@ -47,5 +51,11 @@
 
     <p id="status" class="status wrap">Loading recipes…</p>
   </main>
+
+  <footer class="site-foot">
+    <svg class="ornament" viewBox="0 0 200 20" aria-hidden="true"><path d="M10 10H78M122 10H190" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="6" cy="10" r="1.6" fill="currentColor"/><circle cx="194" cy="10" r="1.6" fill="currentColor"/><path d="M87 6.5 90.5 10 87 13.5 83.5 10ZM113 6.5 116.5 10 113 13.5 109.5 10Z" fill="currentColor"/><g fill="currentColor"><ellipse cx="100" cy="4.6" rx="2.3" ry="4"/><ellipse cx="100" cy="15.4" rx="2.3" ry="4"/><ellipse cx="94.6" cy="10" rx="4" ry="2.3"/><ellipse cx="105.4" cy="10" rx="4" ry="2.3"/></g><circle cx="100" cy="10" r="1.5" fill="var(--bg)"/></svg>
+    <p class="foot-script">Bon appétit&nbsp;!</p>
+    <p class="foot-note">From our family's table to yours</p>
+  </footer>
 </body>
 </html>
