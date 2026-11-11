@@ -1,0 +1,79 @@
+# The storage chart from the binder, as printed.
+title: Fridge & Freezer Storage
+link: Fridge & freezer chart
+order: 3
+intro: How long things keep, from the chart in the binder.
+columns: [Product, Refrigerator, Freezer]
+sections:
+  - name: Eggs
+    rows:
+      - Fresh, in shell | 3–5 weeks | Don't freeze
+      - Raw yolks, whites | 2–4 days | 1 year
+      - Hard cooked | 1 week | Don't freeze
+      - Liquid pasteurized eggs or egg substitutes, opened | 3 days | Don't freeze
+      - Liquid pasteurized eggs or egg substitutes, unopened | 10 days | 1 year
+  - name: TV Dinners, Frozen Casseroles
+    rows:
+      - Keep frozen until ready to heat | – | 3–4 months
+  - name: Deli & Vacuum-Packed Products
+    rows:
+      - Store-prepared (or homemade) egg, chicken, tuna, ham, macaroni salads | 3–5 days | Don't freeze
+      - Pre-stuffed pork & lamb chops, chicken breasts stuffed w/dressing | 1 day | Don't freeze
+      - Store-cooked convenience meals | 3–4 days | Don't freeze
+      - Commercial brand vacuum-packed dinners with USDA seal, unopened | 2 weeks | Don't freeze
+  - name: Raw Hamburger, Ground & Stew Meat
+    rows:
+      - Hamburger & stew meats | 1–2 days | 3–4 months
+      - Ground turkey, veal, pork, lamb | 1–2 days | 3–4 months
+  - name: Ham, Corned Beef
+    rows:
+      - Corned beef in pouch with pickling juices | 5–7 days | Drained, 1 month
+      - Ham, canned, labeled “Keep Refrigerated,” unopened | 6–9 months | Don't freeze
+      - Ham, canned, labeled “Keep Refrigerated,” opened | 3–5 days | 1–2 months
+      - Ham, fully cooked, whole | 7 days | 1–2 months
+      - Ham, fully cooked, half | 3–5 days | 1–2 months
+      - Ham, fully cooked, slices | 3–4 days | 1–2 months
+  - name: Hot Dogs & Lunch Meats (in freezer wrap)
+    rows:
+      - Hot dogs, opened package | 1 week | 1–2 months
+      - Hot dogs, unopened package | 2 weeks | 1–2 months
+      - Lunch meats, opened package | 3–5 days | 1–2 months
+      - Lunch meats, unopened package | 2 weeks | 1–2 months
+  - name: Soups & Stews
+    rows:
+      - Vegetable or meat-added & mixtures of them | 3–4 days | 2–3 months
+  - name: Bacon & Sausage
+    rows:
+      - Bacon | 7 days | 1 month
+      - Sausage, raw from pork, beef, chicken or turkey | 1–2 days | 1–2 months
+      - Smoked breakfast links, patties | 7 days | 1–2 months
+  - name: Fresh Meat (Beef, Veal, Lamb, & Pork)
+    rows:
+      - Steaks | 3–5 days | 6–12 months
+      - Chops | 3–5 days | 4–6 months
+      - Roasts | 3–5 days | 4–12 months
+      - Variety meats (tongue, kidneys, liver, heart, chitterlings) | 1–2 days | 3–4 months
+  - name: Meat Leftovers
+    rows:
+      - Cooked meat & meat dishes | 3–4 days | 2–3 months
+      - Gravy & meat broth | 1–2 days | 2–3 months
+  - name: Fresh Poultry
+    rows:
+      - Chicken or turkey, whole | 1–2 days | 1 year
+      - Chicken or turkey, parts | 1–2 days | 9 months
+      - Giblets | 1–2 days | 3–4 months
+  - name: Cooked Poultry, Leftover
+    rows:
+      - Fried chicken | 3–4 days | 4 months
+      - Cooked poultry dishes | 3–4 days | 4–6 months
+      - Pieces, plain | 3–4 days | 4 months
+      - Pieces covered with broth, gravy | 3–4 days | 6 months
+      - Chicken nuggets, patties | 3–4 days | 1–3 months
+  - name: Fish & Shellfish
+    rows:
+      - Lean fish | 1–2 days | 6–8 months
+      - Fatty fish | 1–2 days | 2–3 months
+      - Cooked fish | 3–4 days | 4–6 months
+      - Smoked fish | 14 days | 2 months
+      - Fresh shrimp, scallops, crawfish, squid | 1–2 days | 3–6 months
+      - Canned seafood (pantry, 5 years) | After opening, 3–4 days | Out of can, 2 months

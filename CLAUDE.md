@@ -61,5 +61,9 @@ build (validation + table layout).
   names the person (e.g. "Gramma Florence"), or it's from a published source.
 - Only magazine recipes the family circled/boxed get transcribed; other recipes on the same
   page are skipped unless the user asks.
-- The "essay on beer and wine" page is a personal email with a full name and email address.
-  Don't publish those.
+- Non-recipe pages (the letter, the beer & wine essay, the storage chart) live in `pages/*.yml`
+  and are linked from the top of the home page. Fields: `title`, `link`, `order`, `intro`,
+  `body` (paragraphs; `## ` lines are headings), `outro`, or `columns` + `sections` for a chart.
+- The letter and essay are published with names, the email address and other personal details
+  removed (user's request). Keep it that way when editing them, and crop names/addresses off
+  photos before committing.

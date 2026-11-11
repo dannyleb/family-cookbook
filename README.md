@@ -66,6 +66,7 @@ npm run check      # validate recipes only
 
 ```
 recipes/        one .yml per recipe (files starting with _ are ignored)
+pages/          the letter, the beer & wine essay, the storage chart
 images/         card scans and food photos
 cookbook.yml    site title, subtitle, category order
 site/           the web app (HTML/CSS/JS, no framework)

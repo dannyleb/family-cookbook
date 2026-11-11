@@ -5,11 +5,12 @@ import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import * as yaml from 'js-yaml';
-import { normalizeRecipe, layoutTable, refsIn } from '../site/model.js';
+import { normalizeRecipe, layoutTable, refsIn, REF } from '../site/model.js';
 
 const root = path.resolve(import.meta.dirname, '..');
 const dirs = {
   recipes: path.join(root, 'recipes'),
+  pages: path.join(root, 'pages'),
   images: path.join(root, 'images'),
   site: path.join(root, 'site'),
   dist: path.join(root, 'dist'),
@@ -63,10 +64,60 @@ for (const file of files) {
   if (recipe && !errors.length) recipes.push(recipe);
 }
 
+// ---- extra pages (letter, essay, charts) ---------------------------------------
+const pages = [];
+const pageFiles = existsSync(dirs.pages)
+  ? (await fs.readdir(dirs.pages)).filter((f) => /\.ya?ml$/i.test(f) && !f.startsWith('_')).sort()
+  : [];
+for (const file of pageFiles) {
+  const src = path.join(dirs.pages, file);
+  const errors = [];
+  let raw;
+  try {
+    raw = yaml.load(await fs.readFile(src, 'utf8')) || {};
+  } catch (e) {
+    report(src, [`YAML syntax error: ${e.message.split('\n')[0]}`], []);
+    continue;
+  }
+  const page = {
+    slug: file.replace(/\.ya?ml$/i, ''),
+    title: String(raw.title ?? '').trim(),
+    link: String(raw.link ?? raw.title ?? '').trim(),
+    order: Number(raw.order ?? 99),
+    intro: String(raw.intro ?? '').trim(),
+    outro: String(raw.outro ?? '').trim(),
+    body: String(raw.body ?? '').trim(),
+    columns: (raw.columns ?? []).map(String),
+    sections: (raw.sections ?? []).map((sec) => ({
+      name: String(sec.name ?? '').trim(),
+      rows: (sec.rows ?? []).map((row) => String(row).split('|').map((c) => c.trim())),
+    })),
+  };
+  if (!page.title) errors.push('Missing "title"');
+  for (const sec of page.sections) {
+    for (const row of sec.rows) {
+      if (row.length !== page.columns.length) {
+        errors.push(`"${sec.name}": row "${row.join(' | ')}" has ${row.length} cells, expected ${page.columns.length}`);
+      }
+    }
+  }
+  report(src, errors, []);
+  if (!errors.length) pages.push(page);
+}
+pages.sort((a, b) => a.order - b.order);
+
 const slugs = new Set(recipes.map((r) => r.slug));
 for (const r of recipes) {
   for (const ref of refsIn(r)) {
     if (!slugs.has(ref)) report(path.join(dirs.recipes, `${r.slug}.yml`), [`Links to [[${ref}]], but there's no recipes/${ref}.yml`], []);
+  }
+}
+
+for (const pg of pages) {
+  for (const t of [pg.intro, pg.body, pg.outro]) {
+    for (const m of t.matchAll(REF)) {
+      if (!slugs.has(m[1])) report(path.join(dirs.pages, `${pg.slug}.yml`), [`Links to [[${m[1]}]], but there's no recipes/${m[1]}.yml`], []);
+    }
   }
 }
 
@@ -78,7 +129,7 @@ for (const r of recipes) {
 }
 
 recipes.sort((a, b) => a.title.localeCompare(b.title));
-console.log(`${recipes.length} recipe(s) OK${failed ? ', with errors above' : ''}`);
+console.log(`${recipes.length} recipe(s), ${pages.length} page(s) OK${failed ? ', with errors above' : ''}`);
 if (failed) process.exit(1);
 if (checkOnly) process.exit(0);
 
@@ -91,7 +142,7 @@ if (existsSync(dirs.images)) {
     filter: (p) => !path.basename(p).startsWith('.'),
   });
 }
-await fs.writeFile(path.join(dirs.dist, 'recipes.json'), JSON.stringify({ book, recipes }));
+await fs.writeFile(path.join(dirs.dist, 'recipes.json'), JSON.stringify({ book, recipes, pages }));
 console.log(`Built ${rel(dirs.dist)}/`);
 
 // ---- helpers -----------------------------------------------------------------

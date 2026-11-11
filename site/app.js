@@ -112,6 +112,8 @@ async function init() {
     ),
   }));
   state.bySlug = new Map(state.recipes.map((r) => [r.slug, r]));
+  state.pages = data.pages || [];
+  state.pageBySlug = new Map(state.pages.map((pg) => [pg.slug, pg]));
 
   const order = (state.book.categories || []).map(String);
   const present = [...new Set(state.recipes.map((r) => r.category))];
@@ -124,6 +126,10 @@ async function init() {
   $('#book-title').textContent = state.book.title || 'Family Cookbook';
   $('#book-subtitle').textContent = state.book.subtitle || '';
   $('#book-subtitle').hidden = !state.book.subtitle;
+  $('#extras').innerHTML = state.pages
+    .map((pg) => `<a href="#/page/${encodeURIComponent(pg.slug)}">${esc(pg.link || pg.title)}</a>`)
+    .join('');
+  $('#extras').hidden = !state.pages.length;
 
   bindHome();
   bindRecipeView();
@@ -132,12 +138,15 @@ async function init() {
 }
 
 // ---------------------------------------------------------------------------
-// Routing:  #/  -> home,  #/recipe/<slug>  -> recipe
+// Routing:  #/  -> home,  #/recipe/<slug>  -> recipe,  #/page/<slug>  -> letter, chart...
 // ---------------------------------------------------------------------------
 function route() {
-  const m = location.hash.match(/^#\/recipe\/([^/?#]+)/);
-  const recipe = m && state.bySlug.get(decodeURIComponent(m[1]));
+  const m = location.hash.match(/^#\/(recipe|page)\/([^/?#]+)/);
+  const slug = m && decodeURIComponent(m[2]);
+  const recipe = m && m[1] === 'recipe' && state.bySlug.get(slug);
+  const page = m && m[1] === 'page' && state.pageBySlug.get(slug);
   if (recipe) showRecipe(recipe);
+  else if (page) showPage(page);
   else showHome();
 }
 
@@ -152,6 +161,21 @@ function showHome() {
   renderChips();
   renderResults();
   if (wasHidden) requestAnimationFrame(() => window.scrollTo(0, state.homeScroll));
+}
+
+function showPage(pg) {
+  if (!$('#home').hidden) {
+    state.homeScroll = window.scrollY;
+    state.cameFromHome = true;
+  }
+  setWake(false);
+  $('#home').hidden = true;
+  $('#recipe').hidden = false;
+  $('#recipe').innerHTML = pageHTML(pg);
+  bindBack();
+  bindChartFilter();
+  document.title = `${pg.title} · ${state.book.title || 'Family Cookbook'}`;
+  window.scrollTo(0, 0);
 }
 
 function showRecipe(r) {
@@ -426,6 +450,7 @@ function notesHTML(text) {
     .split(/\n\s*\n/)
     .map((block) => {
       const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
+      if (lines.length === 1 && lines[0].startsWith('## ')) return `<h2>${rich(lines[0].slice(3))}</h2>`;
       if (lines.length && lines.every((l) => /^[-*•]\s/.test(l))) {
         return `<ul>${lines.map((l) => `<li>${rich(l.replace(/^[-*•]\s+/, ''))}</li>`).join('')}</ul>`;
       }
@@ -451,14 +476,86 @@ function bindRecipeView() {
   });
 }
 
-// Handlers on elements that are re-created with each recipe.
-function bindRecipe(r) {
-  const view = $('#recipe');
-
-  $('#back', view).addEventListener('click', () => {
+function bindBack() {
+  $('#back').addEventListener('click', () => {
     if (state.cameFromHome) history.back();
     else location.hash = '#/';
   });
+}
+
+// ---------------------------------------------------------------------------
+// Extra pages: letter, essay, storage chart
+// ---------------------------------------------------------------------------
+function pageHTML(pg) {
+  const cols = pg.columns.length;
+  const chart = pg.sections.length
+    ? `<div class="search chart-filter">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="chart-filter" type="search" placeholder="Find an item (bacon, ham…)" autocomplete="off" aria-label="Find an item in the chart">
+      </div>
+      <table class="chart">
+        <thead><tr>${pg.columns.map((c) => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead>
+        ${pg.sections
+          .map(
+            (sec) => `<tbody data-sec>
+              <tr class="chart-sec"><th colspan="${cols}" scope="colgroup">${esc(sec.name)}</th></tr>
+              ${sec.rows
+                .map(
+                  (row) =>
+                    `<tr data-row="${esc(fold(`${sec.name} ${row[0]}`))}">${row
+                      .map((c, i) => (i === 0 ? `<th scope="row">${esc(c)}</th>` : `<td>${esc(c)}</td>`))
+                      .join('')}</tr>`,
+                )
+                .join('')}
+            </tbody>`,
+          )
+          .join('')}
+      </table>
+      <p class="chart-empty" hidden>Nothing in the chart matches that.</p>`
+    : '';
+
+  return `
+    <div class="recipe-bar">
+      <div class="wrap recipe-bar-inner">
+        <button type="button" class="back" id="back">${ICON.back}<span>All recipes</span></button>
+      </div>
+    </div>
+    <article class="wrap page">
+      <header class="page-head">
+        <p class="eyebrow">From the binder</p>
+        <h1>${esc(pg.title)}</h1>
+        ${pg.intro ? `<p class="lede">${rich(pg.intro)}</p>` : ''}
+      </header>
+      ${pg.body ? `<div class="prose">${notesHTML(pg.body)}</div>` : ''}
+      ${chart}
+      ${pg.outro ? `<p class="page-outro">${rich(pg.outro)}</p>` : ''}
+    </article>`;
+}
+
+function bindChartFilter() {
+  const input = $('#chart-filter');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const tokens = fold(input.value).split(/\s+/).filter(Boolean);
+    let shown = 0;
+    document.querySelectorAll('.chart tbody[data-sec]').forEach((sec) => {
+      let any = false;
+      sec.querySelectorAll('tr[data-row]').forEach((tr) => {
+        const hit = tokens.every((t) => tr.dataset.row.includes(t));
+        tr.hidden = !hit;
+        if (hit) any = true;
+      });
+      sec.hidden = !any;
+      if (any) shown++;
+    });
+    $('.chart-empty').hidden = shown > 0;
+  });
+}
+
+// Handlers on elements that are re-created with each recipe.
+function bindRecipe(r) {
+  const view = $('#recipe');
+  bindBack();
 
   $('#table-toggle', view).addEventListener('change', (e) => {
     state.tableView = e.target.checked;
