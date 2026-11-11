@@ -29,8 +29,8 @@
   --star: var(--brass);
   --rule: var(--bleu);
 
-  --display: "Cormorant Garamond", "Cormorant", Garamond, "Iowan Old Style", Georgia, serif;
-  --text: "Lora", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --display: "Gilda Display", "Didot", "Bodoni 72", "Iowan Old Style", Georgia, serif;   /* one weight, no italic */
+  --text: "Spectral", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --script: "Pinyon Script", "Snell Roundhand", "Apple Chancery", cursive;
   --serif: var(--display);
   --sans: var(--text);
@@ -76,6 +76,7 @@ body {
   color: var(--ink);
   font: 400 1.0625rem/1.6 var(--text);
   -webkit-font-smoothing: antialiased;
+  font-synthesis: none;          /* never fake bold/italic (Gilda Display has neither) */
   padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -90,9 +91,9 @@ body::before {
 
 h1, h2, h3 {
   font-family: var(--display);
-  font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.005em;
   margin: 0;
   text-wrap: balance;
 }
@@ -184,8 +185,8 @@ svg { flex: none; }
   margin-bottom: 0.15rem;
 }
 .hero h1 {
-  font-size: clamp(2.3rem, 10.5vw, 4.6rem);
-  font-weight: 600;
+  font-size: clamp(2.2rem, 10vw, 4.4rem);
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 .hero .ornament { margin-top: 0.7rem; margin-bottom: 0.8rem; }
@@ -274,7 +275,7 @@ svg { flex: none; }
   transition: background-color 0.15s, border-color 0.15s, color 0.15s;
 }
 .chip:hover { border-color: var(--bleu); }
-.chip-n { font-family: var(--display); font-size: 1.02rem; font-weight: 600; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.chip-n { font-family: var(--display); font-size: 1.02rem; font-weight: 400; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
 .chip svg { width: 1rem; height: 1rem; fill: var(--brass); }
 .chip[data-empty] { opacity: 0.5; }
 .chip[aria-pressed="true"] { background: var(--bleu); border-color: var(--bleu); color: var(--on-bleu); }
@@ -317,7 +318,7 @@ svg { flex: none; }
 .card:has(a:focus-visible) { outline: 2px solid var(--bleu); outline-offset: 3px; }
 .card-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .card-body { padding: 1.2rem 3.25rem 1.25rem 1.3rem; display: grid; gap: 0.3rem; }
-.card-title { font-size: 1.6rem; font-weight: 600; }
+.card-title { font-size: 1.55rem; font-weight: 400; }
 .card-title a { color: var(--ink); text-decoration: none; }
 .card-title a::after { content: ""; position: absolute; inset: 0; z-index: 1; }   /* whole card is the link */
 .card-title a:focus-visible { outline: none; }
@@ -336,7 +337,7 @@ svg { flex: none; }
   text-align: center; color: var(--muted);
   padding: 3rem 1rem;
 }
-.empty-title { font-family: var(--display); font-size: 1.7rem; font-weight: 600; color: var(--ink); }
+.empty-title { font-family: var(--display); font-size: 1.7rem; font-weight: 400; color: var(--ink); }
 .empty svg { width: 1.1em; height: 1.1em; vertical-align: -0.15em; fill: var(--brass); }
 .empty .btn { margin-top: 0.5rem; }
 
@@ -386,7 +387,7 @@ svg { flex: none; }
   text-align: center;
 }
 .recipe-head h1,
-.page-head h1 { font-size: clamp(2.5rem, 9vw, 3.9rem); font-weight: 600; }
+.page-head h1 { font-size: clamp(2.4rem, 8.5vw, 3.8rem); font-weight: 400; }
 .recipe-head .ornament,
 .page-head .ornament { margin: 0.35rem auto 0.2rem; }
 .lede { font-size: 1.15rem; font-style: italic; color: var(--muted); max-width: 34rem; }
@@ -395,7 +396,7 @@ svg { flex: none; }
 .facts div { display: grid; padding: 0 1.25rem; }
 .facts div + div { border-left: 1px solid var(--line-strong); }
 .facts dt { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-.facts dd { margin: 0; font-family: var(--display); font-size: 1.3rem; font-weight: 600; line-height: 1.25; }
+.facts dd { margin: 0; font-family: var(--display); font-size: 1.3rem; font-weight: 400; line-height: 1.25; }
 
 /* ---------- toggle switches ---------- */
 .toggles {
@@ -489,7 +490,7 @@ svg { flex: none; }
   border: 1px solid var(--rouge);
   box-shadow: inset 0 0 0 2px var(--bg), inset 0 0 0 3px var(--rouge-soft);
   color: var(--rouge);
-  font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.3rem;
+  font-family: var(--text); font-style: italic; font-weight: 500; font-size: 1.15rem;
   font-variant-numeric: lining-nums;
 }
 .method p { font-size: 1.1rem; line-height: 1.7; padding-top: 0.25rem; max-width: 40rem; }
@@ -551,7 +552,7 @@ svg { flex: none; }
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1.2rem 1.4rem;
 }
-.notes h2 { font-size: 1.6rem; font-style: italic; margin-bottom: 0.4rem; color: var(--rouge); }
+.notes h2 { font-size: 1.6rem; margin-bottom: 0.4rem; color: var(--rouge); }
 .notes p + p, .notes ul { margin-top: 0.6rem; }
 .notes ul { padding-left: 1.2rem; }
 
@@ -612,11 +613,11 @@ svg { flex: none; }
   padding: clamp(1.5rem, 5vw, 2.75rem);
 }
 .prose p + p, .prose ul, .prose p + ul { margin-top: 1rem; }
-.prose h2 { font-size: 1.75rem; font-style: italic; color: var(--rouge); margin: 2.25rem 0 0.75rem; }
+.prose h2 { font-size: 1.75rem; color: var(--rouge); margin: 2.25rem 0 0.75rem; }
 .prose h2:first-child { margin-top: 0; }
 .prose ul { padding-left: 1.25rem; }
 .prose > p:first-child::first-letter {     /* raised initial */
-  font-family: var(--display); font-weight: 600;
+  font-family: var(--display); font-weight: 400;
   font-size: 2.6em; line-height: 1;
   color: var(--rouge);
 }
@@ -652,7 +653,7 @@ svg { flex: none; }
 .chart td { width: 26%; font-variant-numeric: tabular-nums; }
 .chart-sec th {
   background: var(--bleu-soft); color: var(--bleu-strong);
-  font-family: var(--display); font-size: 1.25rem; font-weight: 600; font-style: italic;
+  font-family: var(--display); font-size: 1.25rem; font-weight: 400;
   padding-top: 0.6rem;
 }
 .chart-empty { margin-top: 1rem; color: var(--muted); font-style: italic; text-align: center; }
