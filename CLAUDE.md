@@ -37,9 +37,18 @@ build (validation + table layout).
      directions as short steps in your own words rather than copying the prose. Don't attach
      scans of published pages; the site is public.
 6. **Photo of the card:** keep it; family handwriting is part of the point.
-   `python3 scripts/prep_image.py <upload> images/<slug>-card.jpg` (resizes + strips GPS/EXIF;
-   never commit raw phone photos), then `scan: <slug>-card.jpg`. Multi-page: `scan: [a.jpg, b.jpg]`.
-   Several recipes on one page share the same scan file.
+   `python3 scripts/scan_image.py <upload> images/<slug>-card.jpg [options]` removes the
+   phone's shadow and evens the lighting so it looks scanned, then resizes and strips GPS/EXIF
+   (never commit raw phone photos). Needs `pip install opencv-python-headless`. Then
+   `scan: <slug>-card.jpg`. Multi-page: `scan: [a.jpg, b.jpg]`. Several recipes on one page
+   share the same scan file.
+   - Options: `--crop x0,y0,x1,y1` to drop fingers/binder edges/names; `--keep x0,y0,x1,y1`
+     around a large printed picture so it isn't washed out (Apple Crispy's elephant);
+     `--color card` for tinted card stock (the cream Swedish Meatballs cards); `--color keep`
+     when colored cards sit on a white page (Cheesy Potatoes); `--gamma 1.7` for faint pencil.
+   - Always compare the result with the original before committing: look for washed-out
+     pictures, faint writing, or color blotches.
+   - `scripts/prep_image.py` is the plain version (resize + strip metadata, no clean-up).
    Ask before committing if the photo shows people, addresses, or anything private.
 7. **Check:** `npm run check` must pass with no warnings for the new recipe. Warnings about unused
    ingredients or several unconnected steps mean the `uses` tree is wrong.

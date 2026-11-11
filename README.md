@@ -30,9 +30,10 @@ The site is public, like all GitHub Pages sites on a personal account. Don't put
 **Easiest:** send photos of the cards to Claude in this repo. Conventions are in `CLAUDE.md`.
 
 **By hand:** copy `recipes/_template.yml` to `recipes/<name-with-dashes>.yml` and fill it in.
-The template explains every field. Photos go in `images/` (run them through
-`python3 scripts/prep_image.py photo.jpg images/<name>-card.jpg` first: it shrinks them and strips
-GPS location data).
+The template explains every field. Photos go in `images/`. Run them through
+`python3 scripts/scan_image.py photo.jpg images/<name>-card.jpg` first: it removes the phone's
+shadow so the card looks scanned, shrinks the file and strips GPS location data
+(`python3 scripts/scan_image.py --help` for crop and color options).
 
 The build fails with a plain-English message if a recipe is broken (missing title, a step that
 uses an ingredient that doesn't exist, a missing image), so a bad edit can't take the site down.
