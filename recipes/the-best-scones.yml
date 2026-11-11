@@ -1,0 +1,64 @@
+title: The Best Scones
+category: Breakfast
+from: Danielle (baking blog printout with family notes)
+serves: 8 scones
+time: 40 min
+tags: [scones, rosemary, vanilla glaze, brunch]
+
+before:
+  - Preheat the oven to 400°F (204°C). Line a large baking sheet with parchment or a silicone mat.
+
+ingredients:
+  - heading: Scones
+  - flour: 2 cups (250 grams) all-purpose flour, spooned & leveled
+  - sugar: ⅓ cup (65 grams) granulated sugar, minus 1 Tbsp (handwritten)
+  - bp: 1 tablespoon baking powder
+  - salt: ½ teaspoon salt (kosher)
+  - butter: 6 tablespoons (85 grams) cold unsalted butter, cubed
+  - rosemary: 1 teaspoon crushed dry rosemary (handwritten; see notes)
+  - cream: ½ cup (120 ml) heavy whipping cream
+  - egg: 1 large egg
+  - vanilla: 1 teaspoon pure vanilla extract, a short teaspoon (handwritten)
+  - brushcream: More heavy cream, for brushing the tops
+  - heading: Vanilla glaze
+  - powdered: 1 cup (120 grams) powdered sugar
+  - milk: 1–2 tablespoons (15–30 ml) milk
+  - gvanilla: ½ teaspoon pure vanilla extract
+
+steps:
+  - action: whisk together
+    uses: [flour, sugar, bp, salt]
+    text: In a large bowl, whisk together the flour, sugar, baking powder and salt.
+  - id: crumbs
+    action: cut in to pea-size crumbs; mix in rosemary
+    uses: [previous, butter, rosemary]
+    text: Cut in the cold butter with a pastry cutter or fork until you have small pea-sized crumbs. Mix in the rosemary.
+  - id: wet
+    action: whisk
+    uses: [cream, egg, vanilla]
+    text: In another bowl, whisk the cream, egg and vanilla.
+  - action: stir in just until combined (crumbly is OK)
+    uses: [crumbs, wet]
+    text: Add the wet ingredients to the dry and stir just until combined. A little crumbly is fine.
+  - action: ball, 7-in circle, 8 wedges; onto sheet
+    text: On a lightly floured surface, work it into a ball, flatten to a 7-inch circle and cut 8 equal pieces. Space them on the baking sheet.
+  - action: freeze 5–10 min
+    text: Freeze 5–10 minutes, until chilled.
+  - action: brush tops
+    uses: [previous, brushcream]
+    text: Brush the tops with a little cream.
+  - id: baked
+    action: bake 400°F 18–22 min; cool completely
+    text: Bake 18–22 minutes, until lightly browned and cooked through. Cool completely.
+  - id: glaze
+    action: whisk; thin with milk or thicken with sugar
+    uses: [powdered, milk, gvanilla]
+    text: Whisk the powdered sugar, milk and vanilla. Add milk to thin it or powdered sugar to thicken it.
+  - action: glaze; set 10–15 min
+    uses: [baked, glaze]
+    text: Top the scones with the glaze and let it harden 10–15 minutes before serving.
+
+notes: |
+  The rosemary line is handwritten (“crushed dry rosemary, kinda old”), and the 1 is written over another number. The printout says mix-ins go in right after cutting in the butter, so it's there above.
+
+  Keeps 3–4 days airtight, at room temperature or in the fridge. Any milk works for the glaze. The printout also lists blueberry, cranberry-orange, cinnamon-raisin and lemon-poppy seed versions, and orange, lemon or cinnamon glazes.

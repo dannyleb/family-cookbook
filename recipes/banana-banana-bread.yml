@@ -1,0 +1,40 @@
+title: Banana Banana Bread
+category: Breads
+from: Allrecipes (printout with family notes)
+serves: 12 (one 9×5 loaf)
+time: 1 hr 15 min
+tags: [banana bread, quick bread, maple syrup, coconut sugar, avocado oil]
+
+before:
+  - Preheat the oven to 350°F (175°C). Lightly grease a 9×5-inch loaf pan.
+
+ingredients:
+  - flour: 2 cups all-purpose flour
+  - soda: 1 teaspoon baking soda
+  - salt: ¼ teaspoon salt
+  - sugar: ¼ cup coconut sugar + ¼ cup maple syrup (printed ¾ cup brown sugar is crossed out)
+  - fat: ½ cup avocado oil (printed butter is crossed out)
+  - eggs: 2 large eggs, beaten
+  - bananas: 4 bananas (printed 2⅓ cups mashed overripe bananas)
+
+steps:
+  - id: dry
+    action: combine
+    uses: [flour, soda, salt]
+    text: Combine the flour, baking soda and salt in a large bowl.
+  - action: beat until smooth
+    uses: [sugar, fat]
+    text: In a separate bowl, beat the sugar (and syrup) with the oil until smooth.
+  - action: stir in until well blended
+    uses: [previous, eggs, bananas]
+    text: Stir in the eggs and mashed bananas until well blended.
+  - action: stir into flour mix, just combined
+    uses: [previous, dry]
+    text: Stir the banana mixture into the flour mixture just until combined. Pour into the loaf pan.
+  - action: bake ~60 min, until a toothpick is clean
+    text: Bake until a toothpick in the center comes out clean, about 60 minutes.
+  - action: cool 10 min in pan, then on a rack
+    text: Cool in the pan 10 minutes, then turn out onto a wire rack to cool completely.
+
+notes: |
+  Handwritten at the top: “Bake at intervals: 20 min, 15 min, 10 min.”
