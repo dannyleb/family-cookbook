@@ -5,7 +5,7 @@ import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import * as yaml from 'js-yaml';
-import { normalizeRecipe, layoutTable } from '../site/model.js';
+import { normalizeRecipe, layoutTable, refsIn } from '../site/model.js';
 
 const root = path.resolve(import.meta.dirname, '..');
 const dirs = {
@@ -61,6 +61,13 @@ for (const file of files) {
 
   report(src, errors, warnings);
   if (recipe && !errors.length) recipes.push(recipe);
+}
+
+const slugs = new Set(recipes.map((r) => r.slug));
+for (const r of recipes) {
+  for (const ref of refsIn(r)) {
+    if (!slugs.has(ref)) report(path.join(dirs.recipes, `${r.slug}.yml`), [`Links to [[${ref}]], but there's no recipes/${ref}.yml`], []);
+  }
 }
 
 const slugsByTitle = new Map();

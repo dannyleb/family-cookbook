@@ -1,0 +1,23 @@
+title: Moroccan Spice Mix
+category: Sauces & Extras
+serves: Makes ¾ cup
+tags: [spice rub, moroccan, fish]
+description: For [[moroccan-white-fish]].
+
+ingredients:
+  - cumin: 1 tablespoon ground cumin
+  - coriander: 1 tablespoon ground coriander
+  - cloves: 1 teaspoon ground cloves
+  - cinnamon: 1 teaspoon ground cinnamon
+  - nutmeg: 1 teaspoon ground nutmeg
+  - paprika: 1 tablespoon paprika
+  - turmeric: 1 teaspoon turmeric
+  - ginger: 1 teaspoon ground ginger
+  - sugar: 1 tablespoon sugar
+  - salt: 2 tablespoons kosher salt
+  - pepper: 2 tablespoons freshly ground black pepper
+
+steps:
+  - action: combine in a small bowl
+    uses: [cumin, coriander, cloves, cinnamon, nutmeg, paprika, turmeric, ginger, sugar, salt, pepper]
+    text: Combine all ingredients in a small bowl.

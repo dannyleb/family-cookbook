@@ -1,0 +1,59 @@
+title: Sunday Gravy Spaghetti Sauce
+category: Mains
+time: About 5 hours
+tags: [italian, pasta, tomato sauce, sausage, pork, sunday dinner]
+description: You need a pretty big pot, or you can cut this recipe in half.
+scan: sunday-gravy-spaghetti-sauce-card.jpg
+
+ingredients:
+  - garlic: 10–12 minced garlic cloves
+  - onions: 1–2 large minced Spanish onions (lots!)
+  - oil: ¾ cup olive oil
+  - puree12: 1 12 oz. can of tomato puree
+  - crushed: 3 28 oz. cans of crushed tomatoes
+  - puree28: 3 28 oz. cans of tomato puree
+  - water: ½ cup of water
+  - sherry: 1⅓ cups of sherry or white wine
+  - bay: 6 bay leaves
+  - pork: 1½ lb of pork or veal (boneless pork chops are great)
+  - sausage: 1 lb sweet Italian sausage (pre-cook them, poke holes with fork and nuke until almost cooked)
+  - broth: ½ cup chicken broth
+  - salt: 1 teaspoon salt
+  - oregano: 2 teaspoons oregano, dried
+  - basil: 3 teaspoons basil, dried
+  - redpepper: ½ teaspoon red pepper
+  - parm: ½ cup of parmesan cheese
+
+steps:
+  - action: sauté until sweating
+    uses: [garlic, onions, oil]
+    text: Sauté the garlic and onions in the olive oil until sweating.
+  - action: stir until it turns “that color” (orange)
+    uses: [previous, puree12]
+    text: >-
+      Add the 12 oz. can of tomato puree and stir until it turns “that color,” as John
+      Desantis would say (orange).
+  - action: add, rinse cans in; cook medium-low 1½ hr
+    uses: [previous, crushed, puree28, water, sherry]
+    text: >-
+      Add the crushed tomatoes and tomato puree. Clean out the cans with ½ cup of water and
+      1⅓ cups of sherry or white wine. Cook on medium-low for 1½ hours, stirring occasionally.
+  - action: add; cook low to medium-low 2 hr
+    uses: [previous, bay, pork, sausage, broth]
+    text: >-
+      Add the bay leaves, pork or veal, sausage and chicken broth. Cook on low to medium-low
+      for 2 hours, stirring occasionally.
+  - action: remove meat (save for later)
+    text: Remove the sausage and meat (save to put in later).
+  - action: add; cook low to medium-low 1 hr
+    uses: [previous, salt, oregano, basil, redpepper, parm]
+    text: >-
+      Add the salt, oregano, basil, red pepper and parmesan. Cook on low to medium-low for
+      1 hour, and yes, again, stir occasionally.
+  - action: adjust seasoning; add meat back to reheat
+    text: Adjust seasoning, add the meat to reheat, and serve the meat on the side.
+
+notes: |
+  Serve with macaroni, salad and Italian bread.
+
+  Leftover sauce can be heat jarred or frozen.

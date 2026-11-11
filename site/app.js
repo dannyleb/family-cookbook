@@ -1,4 +1,4 @@
-import { layoutTable, stepText } from './model.js';
+import { layoutTable, stepText, REF } from './model.js';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -8,6 +8,15 @@ const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const fold = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const imgSrc = (name) => `images/${encodeURIComponent(name)}`;
+
+// Escaped text with [[slug]] turned into a link to that recipe.
+const rich = (text) =>
+  esc(text).replace(REF, (m, slug) => {
+    const r = state.bySlug.get(slug);
+    return r ? `<a href="#/recipe/${slug}">${esc(r.title)}</a>` : slug;
+  });
+// Plain text with [[slug]] replaced by the recipe title (search, cards).
+const plain = (text) => String(text ?? '').replace(REF, (m, slug) => state.bySlug.get(slug)?.title ?? slug);
 
 // localStorage can be unavailable (private mode, blocked storage): never let that break the page.
 const store = {
@@ -86,11 +95,12 @@ async function init() {
   $('#status').hidden = true;
 
   state.book = data.book || {};
+  state.bySlug = new Map(data.recipes.map((r) => [r.slug, r]));
   state.recipes = data.recipes.map((r) => ({
     ...r,
     _title: fold(r.title),
     _hay: fold(
-      [
+      plain([
         r.title,
         r.category,
         r.from,
@@ -98,7 +108,7 @@ async function init() {
         r.notes,
         ...r.tags,
         ...r.ingredients.map((i) => i.text),
-      ].join(' \n '),
+      ].join(' \n ')),
     ),
   }));
   state.bySlug = new Map(state.recipes.map((r) => [r.slug, r]));
@@ -269,7 +279,7 @@ function cardHTML(r) {
     <div class="card-body">
       <p class="eyebrow">${esc(r.category)}</p>
       <h2 class="card-title"><a href="#/recipe/${encodeURIComponent(r.slug)}">${esc(r.title)}</a></h2>
-      ${r.description ? `<p class="card-desc">${esc(r.description)}</p>` : ''}
+      ${r.description ? `<p class="card-desc">${esc(plain(r.description))}</p>` : ''}
       ${meta ? `<p class="card-meta">${meta}</p>` : ''}
     </div>
     ${starButton(r)}
@@ -311,7 +321,7 @@ function recipeHTML(r) {
       <header class="recipe-head">
         <p class="eyebrow">${esc(r.category)}</p>
         <h1>${esc(r.title)}</h1>
-        ${r.description ? `<p class="lede">${esc(r.description)}</p>` : ''}
+        ${r.description ? `<p class="lede">${rich(r.description)}</p>` : ''}
         ${
           facts.length
             ? `<dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`
@@ -366,12 +376,12 @@ function standardHTML(r) {
     .map((x) =>
       x.type === 'heading'
         ? `</ul><h3>${esc(x.text)}</h3><ul>`
-        : `<li><label><input type="checkbox"><span>${esc(x.text)}</span></label></li>`,
+        : `<li><label><input type="checkbox"><span>${rich(x.text)}</span></label></li>`,
     )
     .join('');
   const steps = [
-    ...r.before.map((t) => `<li><span class="num">${++n}</span><p>${esc(t)}</p></li>`),
-    ...r.steps.map((s) => `<li><span class="num">${++n}</span><p>${esc(stepText(r, s))}</p></li>`),
+    ...r.before.map((t) => `<li><span class="num">${++n}</span><p>${rich(t)}</p></li>`),
+    ...r.steps.map((s) => `<li><span class="num">${++n}</span><p>${rich(stepText(r, s))}</p></li>`),
   ].join('');
 
   return `<div class="std">
@@ -394,10 +404,10 @@ function tableHTML(r) {
   const td = (c) => {
     const span = `${c.rowspan > 1 ? ` rowspan="${c.rowspan}"` : ''}${c.colspan > 1 ? ` colspan="${c.colspan}"` : ''}`;
     const cls = { ingredient: 'ing', step: 'act', empty: 'gap' }[c.kind] + (c.col === 0 ? ' c0' : '');
-    return `<td class="${cls}"${span}>${esc(c.text)}</td>`;
+    return `<td class="${cls}"${span}>${rich(c.text)}</td>`;
   };
 
-  const head = header.map((t) => `<tr><td class="pre c0" colspan="${cols}"><span>${esc(t)}</span></td></tr>`).join('');
+  const head = header.map((t) => `<tr><td class="pre c0" colspan="${cols}"><span>${rich(t)}</span></td></tr>`).join('');
   const bodyRows = byRow
     .map((rowCells) => `<tr>${rowCells.sort((a, b) => a.col - b.col).map(td).join('')}</tr>`)
     .join('');
@@ -417,9 +427,9 @@ function notesHTML(text) {
     .map((block) => {
       const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
       if (lines.length && lines.every((l) => /^[-*•]\s/.test(l))) {
-        return `<ul>${lines.map((l) => `<li>${esc(l.replace(/^[-*•]\s+/, ''))}</li>`).join('')}</ul>`;
+        return `<ul>${lines.map((l) => `<li>${rich(l.replace(/^[-*•]\s+/, ''))}</li>`).join('')}</ul>`;
       }
-      return `<p>${esc(lines.join(' '))}</p>`;
+      return `<p>${rich(lines.join(' '))}</p>`;
     })
     .join('');
 }

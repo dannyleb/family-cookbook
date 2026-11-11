@@ -7,6 +7,21 @@
 
 export const PREVIOUS = 'previous';
 
+// [[recipe-slug]] inside any text links to that recipe.
+export const REF = /\[\[([a-z0-9-]+)\]\]/g;
+
+/** Every [[slug]] a recipe's text points at. */
+export function refsIn(recipe) {
+  const texts = [
+    recipe.description,
+    recipe.notes,
+    ...recipe.before,
+    ...recipe.ingredients.map((x) => x.text),
+    ...recipe.steps.map((s) => `${s.action} ${s.text}`),
+  ];
+  return [...new Set(texts.flatMap((t) => [...String(t).matchAll(REF)].map((m) => m[1])))];
+}
+
 const str = (v) => (v == null ? '' : String(v).trim());
 const list = (v) => (v == null ? [] : Array.isArray(v) ? v : [v]);
 

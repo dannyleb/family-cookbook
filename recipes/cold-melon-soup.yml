@@ -1,0 +1,23 @@
+title: Cold Melon Soup
+category: Soups & Stews
+tags: [soup, cantaloupe, honeydew, melon, summer, chilled, wine]
+scan: bearnaise-sauce-card.jpg
+
+ingredients:
+  - cantaloupe: 3 cups cantaloupe
+  - honeydew: 3 cups honeydew
+  - oj: 2 cups OJ
+  - lime: ⅓ cup lime juice
+  - honey: 3 tbl honey
+  - chablis: 2 cups Chablis
+
+steps:
+  - action: half chopped fine, half puréed
+    uses: [cantaloupe, honeydew]
+    text: Chop half the melon fine and purée the other half.
+  - action: mix; serve cold
+    uses: [previous, oj, lime, honey, chablis]
+    text: Mix with the OJ, lime juice, honey and Chablis. Serve cold.
+
+notes: |
+  The card lists ingredients only, plus “half chopped fine / half puréed” for the melon. The steps above are the obvious method.

@@ -1,0 +1,50 @@
+title: Billy's Mandarin Beef with Bok Choy
+category: Mains
+serves: 4–6
+tags: [beef, stir-fry, wok, chinese, bok choy, tofu]
+scan: billys-mandarin-beef-with-bok-choy-card.jpg
+
+ingredients:
+  - beef: 2 cups sliced beef
+  - heading: Marinade
+  - soy1: 2 Tbl. soy
+  - sherry1: 1 Tbl. sherry
+  - garlic: Garlic
+  - ginger: Ginger
+  - cornstarch: Cornstarch
+  - heading: Wok
+  - oil: 2–3 Tbl. oil
+  - carrot: 1 cup sliced carrot
+  - greenpepper: 1 cup sliced green pepper
+  - scallion: ½ cup chopped green onion
+  - bokchoy: 2 cups chopped bok choy
+  - tofu: 2 cups cubed firm bean curd
+  - soy2: 3 Tbl. soy
+  - sherry2: 2 Tbl. sherry
+  - oyster: 3 Tbl. oyster sauce (or substitute)
+  - sugar: ½ Tbl. sugar
+  - chili: Hot chili oil, to taste
+  - slurry: Cornstarch in broth
+  - sesame: ½ tsp. sesame oil
+
+steps:
+  - id: marinated
+    action: marinate
+    uses: [beef, soy1, sherry1, garlic, ginger, cornstarch]
+    text: Marinate the beef in the soy, sherry, garlic, ginger and cornstarch.
+  - id: wok
+    action: heat wok, add oil
+    uses: [oil]
+    text: Heat the wok and add the oil.
+  - action: stir-fry 1 min
+    uses: [marinated, wok]
+    text: Stir-fry the garlic, ginger and beef 1 min.
+  - action: add; stir-fry 1 min, then cover 1 min
+    uses: [previous, carrot, greenpepper, scallion, bokchoy, tofu, soy2, sherry2, oyster, sugar, chili, slurry]
+    text: >-
+      Add the carrot, green pepper, green onion, bok choy, bean curd, soy, sherry, oyster
+      sauce, sugar, hot chili oil to taste, and the cornstarch in broth. Stir-fry 1 min, then
+      cover 1 min.
+  - action: add & serve
+    uses: [previous, sesame]
+    text: Add the sesame oil and serve.

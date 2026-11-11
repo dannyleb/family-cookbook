@@ -1,0 +1,34 @@
+title: Moroccan White Fish
+category: Mains
+tags: [fish, moroccan, spice rub, roasted]
+
+before:
+  - Preheat the oven to 400°F.
+
+ingredients:
+  - fish: 1 to 2 pounds whole white fish or filets
+  - lemon: 1 lemon, juiced
+  - oil1: 2 tablespoons olive oil (half of ¼ cup)
+  - oil2: 2 tablespoons olive oil (the other half)
+  - garlic: 2 garlic cloves, chopped
+  - spice: 4 tablespoons [[moroccan-spice-mix]]
+
+steps:
+  - action: score skin, several 1-in slits each side
+    uses: [fish]
+    text: Score the fish with a paring knife, making several 1-inch slits in the skin on each side. Don't cut too deep.
+  - action: drizzle
+    uses: [previous, lemon, oil1]
+    text: Put the fish on a dish and drizzle with the lemon juice and half the oil.
+  - action: press garlic into slits; rub spice all over; marinate 1 hr
+    uses: [previous, garlic, spice]
+    text: >-
+      Press the garlic into the score marks and rub the spice mix all over the inside and
+      outside of the fish. Cover with plastic wrap and marinate in the fridge for 1 hour.
+  - action: very hot skillet; sear both sides
+    uses: [previous, oil2]
+    text: >-
+      Heat a skillet big enough for the fish over high heat until almost smoking. Pour in the
+      rest of the oil and let it heat, then sear the fish well on both sides.
+  - action: oven ~7 min, until it flakes
+    text: Put the pan in the oven for about 7 minutes, until the fish flakes easily. Move to a serving platter.

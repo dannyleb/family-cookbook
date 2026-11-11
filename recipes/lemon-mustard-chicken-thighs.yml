@@ -1,0 +1,67 @@
+title: Lemon Mustard Chicken Thighs
+category: Mains
+tags: [chicken, lemon, mustard, skillet]
+
+before:
+  - Heat oven to 400°F.
+
+ingredients:
+  - chicken: 4 boneless skinless chicken thighs
+  - mustard: 1 tbsp whole grain mustard
+  - zest1: 1 tsp lemon zest (of 1 tbsp, divided)
+  - zest2: 2 tsp lemon zest (the rest)
+  - oregano: ½ tsp dried oregano
+  - basil: ½ tsp dried basil
+  - saltpepper: Sea salt and freshly cracked pepper, to taste
+  - oil1: 1 tbsp olive oil (of 2 tbsp, divided)
+  - oil2: 1 tbsp olive oil (the rest)
+  - lemon: ¼ cup lemon juice (about 1 lemon)
+  - broth: 1¼ cups chicken broth
+  - garlic: 2 garlic cloves, minced
+  - butter: 1 tbsp unsalted butter
+  - flour: 1 tbsp flour
+  - parsley: Parsley, for garnish
+
+steps:
+  - id: rub
+    action: mix rub
+    uses: [mustard, zest1, oregano, basil, oil1]
+    text: Make the rub in a small bowl with the mustard, 1 tsp of the lemon zest, oregano, basil and 1 tbsp of the olive oil.
+  - id: coated
+    action: coat both sides; season
+    uses: [chicken, rub, saltpepper]
+    text: Coat the chicken on both sides with the rub, then season both sides with salt and pepper.
+  - id: liquid
+    action: combine; set aside
+    uses: [zest2, lemon, broth]
+    text: In a measuring cup, combine the rest of the zest, the lemon juice and the broth. Set aside.
+  - action: brown 2–3 min in oven-safe skillet; flip
+    uses: [coated, oil2]
+    text: >-
+      Heat the remaining oil in a large OVEN-SAFE skillet over medium heat. Cook the chicken
+      2–3 minutes, until golden brown, then flip it.
+  - action: add, stir 30 sec
+    uses: [previous, garlic]
+    text: Add the garlic and cook, stirring constantly, for 30 seconds.
+  - action: add, scrape pan; bake 20 min
+    uses: [previous, liquid]
+    text: >-
+      Add the lemon juice mixture and stir, scraping up the browned bits. Put the pan in the
+      oven and bake 20 minutes, or until the chicken is cooked through.
+  - id: pan
+    action: chicken out (foil tent); bring liquid to gentle boil
+    text: >-
+      Move the chicken to a plate and tent with foil. Put the pan over medium heat and bring
+      the liquid to a gentle boil.
+  - id: paste
+    action: rub into a crumbly paste
+    uses: [butter, flour]
+    text: In a small bowl, use your fingers to mix the butter and flour into a dry, crumbly paste.
+  - action: whisk in until glossy; season
+    uses: [pan, paste]
+    text: >-
+      Whisk the paste into the sauce. It will thicken slightly and look glossy. Taste and
+      season with salt and pepper if needed.
+  - action: chicken back in, coat; garnish
+    uses: [previous, parsley]
+    text: Put the chicken and its juices back in the pan, coat with sauce, garnish with parsley and serve.

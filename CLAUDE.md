@@ -27,9 +27,19 @@ build (validation + table layout).
      component (sauce, frosting) gets an `id` so a later step can combine it.
    - `text`: the full instruction for the normal view, close to the card's wording.
    Pre-heating and pan prep go in `before:`, not steps.
+   - Words you add for clarity go in square brackets: `½ [cup] chicken broth`. If the card has
+     no directions and you write the obvious ones, say so in `notes`.
+   - Link another recipe with `[[slug]]` in any text (e.g. a spice mix used by a main). The build
+     fails if the slug doesn't exist. A sub-recipe that makes more than one use (spice blends)
+     gets its own file.
+   - **Published sources** (newspaper clippings, magazines, websites): put the source in `from`
+     (e.g. `The Italia (printed in Metroland)`), keep ingredients as printed, and write the
+     directions as short steps in your own words rather than copying the prose. Don't attach
+     scans of published pages; the site is public.
 6. **Photo of the card:** keep it; family handwriting is part of the point.
    `python3 scripts/prep_image.py <upload> images/<slug>-card.jpg` (resizes + strips GPS/EXIF;
    never commit raw phone photos), then `scan: <slug>-card.jpg`. Multi-page: `scan: [a.jpg, b.jpg]`.
+   Several recipes on one page share the same scan file.
    Ask before committing if the photo shows people, addresses, or anything private.
 7. **Check:** `npm run check` must pass with no warnings for the new recipe. Warnings about unused
    ingredients or several unconnected steps mean the `uses` tree is wrong.
@@ -42,4 +52,10 @@ build (validation + table layout).
 - `site/app.js`: hash routing (`#/`, `#/recipe/<slug>`), search, chips, favorites (localStorage),
   table toggle, wake lock.
 - Test UI changes in Playwright at phone width (iPhone SE/13) and desktop, light and dark.
-- `recipes/espresso-brownies.yml` is a sample for the table layout; delete it when the user says so.
+
+## Family context
+
+- The binder's sections (from its cover): Dad, Mom, Gramma Urs, Grammi Jan, Gramma Fi Fi,
+  Great Great Grandma Sullivan, Adaptations, Essay on beer and wine.
+- Who wrote which page isn't known yet; leave `from` blank unless the user says, or the page
+  is from a published source.

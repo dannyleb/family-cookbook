@@ -1,0 +1,29 @@
+title: Spiced Nuts
+category: Appetizers
+time: About 15 min
+tags: [nuts, cashews, almonds, walnuts, snack, party]
+scan: spiced-nuts-card.jpg
+
+ingredients:
+  - oil: 2 tablespoons olive oil
+  - cashews: ½ cup raw unsalted cashews
+  - almonds: ½ cup peeled and blanched almonds
+  - walnuts: ½ cup walnut halves
+  - paprika: 1 teaspoon paprika
+  - cinnamon: 1 teaspoon cinnamon
+  - salt: 1 teaspoon salt
+  - cayenne: ½ teaspoon cayenne pepper (or to taste)
+  - sugar: 1 tablespoon brown sugar
+
+steps:
+  - action: heat low to low-medium
+    uses: [oil]
+    text: Heat the olive oil on low to low-medium.
+  - action: add; cook and stir 8–10 min
+    uses: [previous, cashews, almonds, walnuts, paprika, cinnamon, salt, cayenne]
+    text: Add the nuts and everything but the brown sugar. Cook and stir for 8–10 minutes.
+  - action: crumble in; cook 3–5 min
+    uses: [previous, sugar]
+    text: Crumble in the brown sugar and cook for 3–5 minutes.
+  - action: to a bowl; keep slightly warm
+    text: Transfer to a bowl and keep slightly warm.

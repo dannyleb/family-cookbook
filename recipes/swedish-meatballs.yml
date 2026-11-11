@@ -1,0 +1,52 @@
+title: Swedish Meatballs
+category: Mains
+tags: [meatballs, beef, pork, gravy, swedish]
+scan: [swedish-meatballs-card-1.jpg, swedish-meatballs-card-2.jpg]
+
+ingredients:
+  - heading: Meatballs
+  - butter1: 2 Tbls. butter
+  - onion: ½ c. minced onion
+  - egg: 1 egg
+  - milk: ½ c. milk
+  - crumbs: ½ c. fresh bread crumbs
+  - salt1: 1¼ tsp. salt
+  - sugar1: 2 tsp. sugar
+  - allspice: ½ tsp. allspice
+  - nutmeg: ¼ tsp. nutmeg
+  - cinnamon: ⅛ tsp. cinnamon
+  - chuck: 1 lb. ground chuck (see notes)
+  - pork: ¼ lb. ground pork
+  - heading: Gravy
+  - butter2: 2 Tbls. butter
+  - flour: 5 Tbls. flour
+  - hh: ¾ c. half & half
+  - water: 1 c. water
+  - pepper: ⅛ tsp. pepper
+  - salt2: 1¼ tsp. salt
+  - sugar2: 1 tsp. sugar
+
+steps:
+  - id: onions
+    action: sauté until golden
+    uses: [butter1, onion]
+    text: In a large skillet, sauté the onion in hot butter until golden.
+  - id: soak
+    action: beat egg; add milk & crumbs; stand 5 min
+    uses: [egg, milk, crumbs]
+    text: Meanwhile, in a large mixing bowl beat the egg with a fork, add the milk and crumbs and let stand 5 min.
+  - action: add salt, sugar & spices, then meat & onions; blend with fork
+    uses: [soak, salt1, sugar1, allspice, nutmeg, cinnamon, chuck, pork, onions]
+    text: Add 1¼ tsp. salt, 2 tsp. sugar and the spices, then add the meat and onions. Blend with a fork.
+  - action: shape into small balls; brown well, very slowly
+    uses: [previous, butter2]
+    text: In the skillet heat 2 Tbls. butter, then shape the mix into small balls and brown well. Do it very slowly.
+  - action: into fat left in skillet, stir in
+    uses: [previous, flour, sugar2, salt2, pepper]
+    text: Into the fat left in the skillet, stir in the flour, then the sugar, salt and pepper.
+  - action: slowly add water, then h&h; stir till a gravy
+    uses: [previous, water, hh]
+    text: Slowly add 1 c. water, then the half & half. Stir till a gravy.
+
+notes: |
+  The ground chuck line is marked up on the card. It reads as 1 lb, with what may be a “1½” written over it. Check the card photo.

@@ -1,0 +1,43 @@
+title: Sole Normande
+category: Mains
+from: Chef Jim Schultz, The Shipyard Too (printed in Metroland)
+tags: [fish, sole, mussels, shrimp, seafood, cream sauce, french, restaurant]
+
+ingredients:
+  - heading: Poaching liquid (fish fumet)
+  - bones: 4 oz. fish bones
+  - onion: 1 small onion
+  - thyme: ¼ tsp. thyme
+  - bay: 1 bay leaf
+  - peppercorns: 3–4 whole peppercorns
+  - salt: Pinch salt
+  - parsley: Parsley stems
+  - anise: 2 star anise (optional)
+  - heading: Fish
+  - sole: 8 oz. sole or flatfish
+  - mussels: 3 mussels
+  - shrimp: 3 medium shrimp
+  - mushrooms: 8–10 mushroom caps
+  - cream: ½ pint heavy cream
+  - yolks: 2 egg yolks
+
+steps:
+  - action: boil, simmer 15–30 min; strain through cheesecloth
+    uses: [bones, onion, thyme, bay, peppercorns, salt, parsley, anise]
+    text: Bring the poaching-liquid ingredients to a boil and simmer 15–30 minutes. Strain through cheesecloth.
+  - action: back to a slight boil; poach 3–4 min; seafood to a heated plate
+    uses: [previous, sole, mussels, shrimp, mushrooms]
+    text: >-
+      Bring the stock back to a slight boil and carefully poach the seafood 3–4 minutes.
+      Remove carefully and arrange on a heated plate.
+  - action: reduce by half; add cream, reduce by half again
+    uses: [previous, cream]
+    text: Reduce the poaching liquid by half. Add the cream and reduce by half again, to the consistency you want.
+  - action: off heat; whisk in
+    uses: [previous, yolks]
+    text: Take off the heat and whisk in the egg yolks.
+  - action: ladle over seafood; glaze under broiler
+    text: Ladle over the seafood and glaze under the broiler.
+
+notes: |
+  The clipping lists ½ pint of cream but its directions say “add pint heavy cream.” Listed here as printed.

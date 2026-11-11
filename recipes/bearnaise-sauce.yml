@@ -1,0 +1,31 @@
+title: Bearnaise Sauce
+category: Sauces & Extras
+tags: [sauce, tarragon, butter, eggs, steak, french]
+scan: bearnaise-sauce-card.jpg
+
+ingredients:
+  - vinegar: ½ cup red wine vinegar
+  - shallot: 3 tblsp fine chop shallot
+  - tarragon: ¾–1 tsp tarragon
+  - salt: ½ tsp salt
+  - pepper: ¼ tsp fresh pepper
+  - yolks: 4 egg yolks
+  - butter: 1 cup (2 sticks) butter
+  - cream: ¼ cup cream
+
+steps:
+  - action: boil, then simmer 5 min
+    uses: [vinegar, shallot, tarragon, salt, pepper]
+    text: Bring the vinegar, shallot, tarragon, salt and pepper to a boil, then simmer 5 min.
+  - action: blend in, constantly
+    uses: [previous, yolks]
+    text: Add the egg yolks, blending constantly.
+  - action: add piece by piece
+    uses: [previous, butter]
+    text: Add the butter piece by piece.
+  - action: whip; add
+    uses: [previous, cream]
+    text: Whip the cream and add.
+
+notes: |
+  The card is just ingredients with short notes beside them (“boil, simmer 5 min”, “blend const.”, “piece by p.”, “whipped, add”). The steps above spell those out.

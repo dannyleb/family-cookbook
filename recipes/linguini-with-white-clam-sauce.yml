@@ -1,0 +1,41 @@
+title: Linguini with White Clam Sauce
+category: Mains
+tags: [pasta, clams, seafood, italian, garlic]
+scan: linguini-with-white-clam-sauce-card.jpg
+
+ingredients:
+  - linguini: 1 lb. linguini
+  - chopped: 1 can chopped clams (reserve juice)
+  - baby: 1 can whole baby clams (reserve juice)
+  - garlic: 2 tablespoons chopped garlic (more to taste)
+  - oil: 3 tablespoons olive oil
+  - parsley: 1 tablespoon dried parsley
+  - basil: 1 teaspoon dried basil
+  - oregano: ½ teaspoon dried oregano
+  - pepper: Ground black pepper
+  - butter: 1½ tablespoons butter
+
+steps:
+  - action: sauté until soft, not too brown
+    uses: [oil, garlic]
+    text: In a pan, heat the olive oil, add the garlic and sauté until soft but not too brown.
+  - action: add clam juice + herbs; medium-low 4 min
+    uses: [previous, parsley, basil, oregano, pepper]
+    text: Add the reserved clam juice, parsley, basil, oregano and pepper. Cook on medium-low for 4 minutes.
+  - action: add clams; 2 min more
+    uses: [previous, chopped, baby]
+    text: Add the clams and cook another 2 minutes.
+  - id: sauce
+    action: very low; stir in to melt; keep warm
+    uses: [previous, butter]
+    text: Reduce heat to very low and add the butter, gently stirring to melt and incorporate. Keep on warm.
+  - id: pasta
+    action: cook to “lightly el dente”
+    uses: [linguini]
+    text: Prepare the linguini to “lightly el dente.”
+  - action: serve together
+    uses: [sauce, pasta]
+    text: Serve the clam sauce with the linguini.
+
+notes: |
+  Serve with Italian green salad, bread and white wine.

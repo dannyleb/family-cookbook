@@ -1,0 +1,54 @@
+title: Veal Piemontese
+category: Mains
+serves: 4
+from: The Italia (printed in Metroland)
+tags: [veal, apples, cream sauce, white wine, italian, restaurant]
+description: One of Mom's absolute favorites.
+
+ingredients:
+  - veal: 4 4-oz. veal cutlets (⅜-inch thick)
+  - fryoil: 2 cups olive oil
+  - eggs: 2 beaten eggs
+  - crumbs: 1 cup seasoned bread crumbs
+  - flour: 1 cup flour
+  - apples: 2 medium Granny Smith apples
+  - onion: 1 small onion
+  - butter: 2 tbsp. butter
+  - oil: 2 tbsp. olive oil
+  - wine: 1 cup dry white wine
+  - cream: 1 cup heavy cream
+  - parsley: 1 tbsp. chopped parsley
+  - salt: Pinch salt
+  - pepper: Pinch pepper
+  - thyme: Pinch thyme
+
+steps:
+  - action: pound to ¼ in; pat dry; quarter
+    uses: [veal]
+    text: Pound the cutlets to ¼ inch thick, pat dry with paper towels, and cut each into quarters.
+  - action: flour, egg, crumbs
+    uses: [previous, flour, eggs, crumbs]
+    text: Coat each piece with flour on both sides, dip in the beaten egg, then coat with bread crumbs.
+  - id: fried
+    action: fry until golden; drain
+    uses: [previous, fryoil]
+    text: Heat the 2 cups of oil over medium-high heat. Fry the veal until golden brown, then drain on paper towels.
+  - action: slice onion; core and slice apples (8 per half)
+    uses: [onion, apples]
+    text: Halve the onion and slice it. Core the apples, halve them and cut each half into 8 slices.
+  - action: sauté until tender, not mushy
+    uses: [previous, butter, oil]
+    text: Heat the butter and 2 tbsp. olive oil in a large skillet. Sauté the apples and onion until tender but not mushy.
+  - action: deglaze; reduce by a third
+    uses: [previous, wine]
+    text: Deglaze with the wine and reduce the liquid by a third.
+  - action: add cream, seasonings, then veal; low until sauce coats a spoon
+    uses: [previous, cream, parsley, salt, pepper, thyme, fried]
+    text: >-
+      Add the cream and seasonings, then the fried veal. Turn the heat to low and cook until
+      the sauce coats the back of a spoon.
+  - action: arrange on platter; top with sauce
+    text: Arrange the veal, onions and apples on a platter and top with the sauce.
+
+notes: |
+  Best served with pasta or rice with butter and garlic. The paper recommends a dry white wine with it.
